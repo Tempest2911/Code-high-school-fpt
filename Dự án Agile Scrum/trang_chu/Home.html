@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chủ</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="Logo.png">
+  <script src="https://kit.fontawesome.com/3dea816c59.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+
+  <style>
+    .swiper {
+      width: 100%;
+      padding-top: 1vw;
+      padding-bottom: 1vw;
+    }
+
+    .swiper-slide {
+      display: flex;
+      background-position: center;
+      background-size: cover;
+      width: 30vw;
+      height: 30vw;
+      border-radius: 10%;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 30vw;
+      height: 30vw;
+      border-radius: 10%;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="Phong_phan1">
+    <article class="container">
+      <header class="navbar">
+        <div>
+          <a href="Home.html"><img loading="lazy" class="logo" src="Logo.png" alt="Logo"></a>
+        </div>
+
+        <label for="nav-mobile-input" class="nav_bars_btn">
+          <i id="bars" class="fa-solid fa-bars"></i>
+        </label>
+
+        <nav class="nav_pc">
+          <ul class="nav-links" id="navLinks">
+            <li class="textNav"><a href="Home.html">Trang Chủ</a></li>
+            <li>
+              <div class="textNav" id="lalala"><a href="#" id="sanPham">Sản Phẩm</a>
+              </div>
+              <ul class="dropdown" id="dropdown">
+                <li><a href="TeddyBear.html">Teddy Bear</a></li>
+                <li><a href="Cabypara.html">Capybara</a></li>
+                <li><a href="Labubu.html">Labubu</a></li>
+              </ul>
+            </li>
+            <div class="camNang">
+              <li class="textNav" id="scrollButton"><a href="#" id="lh">Cẩm Nang</a></li>
+            </div>
+            <div>
+              <a href="d_nhap.html" style="color: black;">
+                <i id="userLogo" class="fa-solid fa-user-large"></i>
+              </a>
+            </div>
+
+          </ul>
+        </nav>
+
+        <input type="checkbox" hidden name="" class="nav_input" id="nav-mobile-input">
+
+        <label for="nav-mobile-input" class="nav_overlay"></label>
+
+        <nav class="nav_mobile">
+          <label for="nav-mobile-input" class="nav_mobile-close">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </label>
+          <ul class="nav_mobile-list">
+            <li>
+              <a href="Home.html" class="nav_mobile-link">Trang Chủ</a>
+            </li>
+            <li>
+              <div><a href="#" class="nav_mobile-link" onclick="toggleMenu()">Sản Phẩm</a></div>
+              <ul id="dropdown-mobile" class="dropdown-mobile" style="list-style-type: none">
+                <li><a href="TeddyBear.html">Teddy Bear</a></li>
+                <li><a href="Cabypara.html">Capybara</a></li>
+                <li><a href="Labubu.html">Labubu</a></li>
+              </ul>
+            </li>
+            <li><a class="nav_mobile-link">Cẩm Nang</a></li>
+            <a href="d_nhap.html" style="color: black;">
+              <i id="userLogo" class="fa-solid fa-user-large"></i>
+            </a>
+          </ul>
+        </nav>
+
+
+      </header>
+    </article>
+  </section>
+
+  <section class="Phong_phan2">
+    <div class="slider-wrapper">
+      <div class="slider">
+        <img src="img/banner_1.png" id="slide1" alt="" loading="lazy">
+        <img src="img/banner_2.png" id="slide2" alt="" loading="lazy">
+        <img src="img/banner_3.png" id="slide3" alt="" loading="lazy">
+        <img src="img/banner_4.png" id="slide4" alt="" loading="lazy">
+      </div>
+
+      <div class="slider-nav">
+        <a href="#slide1"></a>
+        <a href="#slide2"></a>
+        <a href="#slide3"></a>
+        <a href="#slide4"></a>
+      </div>
+
+      <div class="btn_Banner">
+        <i id="previous" class="fa-solid fa-chevrons-left" onclick="PreBanner()"></i>
+        <i id="next" class="fa-solid fa-chevrons-right" onclick="NextBanner()"></i>
+      </div>
+    </div>
+
+    <div class="voucher">
+      <img src="img/voucher.jpg" alt="">
+    </div>
+
+    <div class="line"></div>
+  </section>
+
+  <section class="Phong_phan3">
+    <div class="main">
+      <h1 id="text_Main">COMBO SIÊU HOT</h1>
+    </div>
+
+    <div style="z-index: 0;" class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/comboHot_1.jpg" loading="lazy" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/comboHot_2.jpg" loading="lazy" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/comboHot_3.jpg" loading="lazy" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/comboHot_4.jpg" loading="lazy" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/comboHot_8.jpg" loading="lazy" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/comboHot_9.jpg" loading="lazy" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/comboHot_10.jpg" loading="lazy" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/comboHot_11.jpg" loading="lazy" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/comboHot_5.jpg" loading="lazy" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/comboHot_6.jpg" loading="lazy" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/comboHot_7.jpg" loading="lazy" />
+        </div>
+      </div>
+    </div>
+    <div class="line"></div>
+  </section>
+
+  <section>
+    <div class="main">
+      <h1 id="text_Main">SIÊU SALE BLACK FRIDAY</h1>
+    </div>
+
+    <div>
+      <img id="bfimg" src="img/BLACKFRIDAY.jpg" alt="" loading="lazy">
+    </div>
+
+    <div id="Phong_phan4" style="margin-top: 5vw;" class="line"></div>
+  </section>
+
+  <section class="Phong_phan4">
+    <article class="container">
+      <div class="main">
+        <h1 id="text_Main">CẨM NANG NHÀ DREAM</h1>
+      </div>
+
+      <div>
+        <div class="grid">
+          <div class="card">
+            <a href="Cam_Nang.html"> <img src="img/cam_nang/cam_nang_1.jpg"></a>
+
+            <div class="card-content">
+              <a href="Cam_Nang.html">
+                <h3 style="color: black;" class="title">Tiết lộ cách giặt gấu bông tại nhà đơn giản bạn nên biết</h3>
+              </a>
+
+              <p class="description">Gấu bông siêu dễ thương được sản xuất từ rất lâu đời , với nét dễ thương vốn có chú
+                gấu của chúng ta chiếm được rất...</p>
+            </div>
+          </div>
+          <div class="card">
+            <a href="Cam_Nang.html"><img src="img/cam_nang/cam_nang_2.jpg" alt="Gấu bông 2"></a>
+
+            <div class="card-content">
+              <a href="Cam_Nang.html">
+                <h3 style="color: black;" class="title">Hướng dẫn khâu gấu bông dễ dàng và bền đẹp</h3>
+              </a>
+              <p class="description">Gấu bông bị rách thì phải làm sao đây Gấu bông nói riêng và thú bông nói chung
+                không
+                đơn thuần là những con...</p>
+            </div>
+          </div>
+          <div class="card">
+            <a href="Cam_Nang.html"><img src="img/cam_nang/cam_nang_3.jpg" alt="Gấu bông 3"></a>
+
+            <div class="card-content">
+              <a href="Cam_Nang.html">
+                <h3 style="color: black;" class="title">Ý nghĩa ẩn chứa trong những chú gấu Teddy cỡ lớn</h3>
+              </a>
+              <p class="description">Thường ngày chúng ta vẫn luôn ôm hôn chú gấu bông của mình nhưng lại không hề biết
+                rằng chú ta có những ý nghĩa…</p>
+            </div>
+          </div>
+          <div class="card">
+            <a href="Cam_Nang.html"><img src="img/cam_nang/cam_nang_4.jpg" alt="Gấu bông 4"></a>
+
+            <div class="card-content">
+              <a href="Cam_Nang.html">
+                <h3 style="color: black;" class="title">Hướng dẫn chọn mua thú nhồi bông cho bé</h3>
+              </a>
+              <p class="description">Chọn mua thú nhồi bông để trang trí cho phòng của con bạn Mua thú nhồi bông cho trẻ
+                và trang trí trong phòng…</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+
+  <section class="ton_chantrang">
+    <footer class="footer">
+      <img src="Logo.png" alt="">
+      <div class="thongtin">
+        <i>
+          <h2>THÔNG TIN CHUYỂN KHOẢN</h2>
+        </i>
+
+        <div class="techcombank"> <b>
+            <h2> TECHCOMBANK - Ngân hàng Kỹ Thương</h2>
+          </b>
+
+          <p> Chi nhánh Hà Nội</p>
+
+          <p> Chủ tài khoản: Dream My Bears</p>
+
+          <p> Số tài khoản: 1903 2389 555551</p>
+        </div>
+
+
+        <div class="mb"><b>
+            <h2>MB BANK - NGÂN HÀNG QUÂN ĐỘI</h2>
+          </b>
+
+          <p> Chủ tài khoản: Dream My Bears</p>
+
+          <p> Số tài khoản: 1903 2389 555551</p>
+        </div>
+
+
+        <div class="vietcombank"> <b>
+            <h2> VIETCOMBANK - Ngân hàng Ngoại Thương</h2>
+          </b>
+          <p>Chi nhánh Hà Nội</p>
+
+          <p> Chủ tài khoản: Dream My Bears</p>
+
+          <p> Số tài khoản: 1903 2389 555551</p>
+        </div>
+
+      </div>
+      <div class="lienhe">
+        <i>
+          <h2>LIÊN HỆ</h2>
+        </i>
+        <p> Hotline: 0912345678</p>
+
+        <p>Email: Dreammybear@gmail.com</p>
+
+        <p> Địa chỉ: Ba Đình, Hà Nội</p>
+      </div>
+
+    </footer>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

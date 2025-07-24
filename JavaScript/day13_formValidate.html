@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="day13_formValidate.css">
+</head>
+
+<body>
+    <form action="" id="form">
+        <label for="">Username: </label>
+        <input type="text" id="username" onblur="checkUser()" onchange="checkUser()">
+        <span class="eror" id="error"></span>
+        <br>
+        <label for="">Passwork: </label>
+        <input type="password" id="password" onblur="checkPass()" onchange="checkPass()">
+        <span class="eror" id="error"></span>
+        <br>
+        <label for="Gender">Gender:</label>
+        <input type="radio" id="male" name="title" value="Male">
+        <label for="Male">Male</label>
+        <input type="radio" id="female" name="title" value="Female">
+        <label for="Female">Female</label>
+        <br>
+        <label for="">Phone: </label>
+        <input type="tel" name="phone" id="phone" onblur="checkPhone()" onchange="checkPhone()">
+        <span class="eror" id="error"></span>
+        <br>
+        <label for="">Email: </label>
+        <input type="text" name="email" id="email" onblur="checkEmail()" onchange="checkEmail()">
+        <br>
+        <label for="class">Class: </label>
+        <select name="class" id="class">
+            <option value="SD1801">SD1801</option>
+            <option value="SD1801">SD1802</option>
+            <option value="SD1801">SD1803</option>
+        </select>
+        <br>
+        <label for="Hobby">Hobby:</label>
+        <input type="radio" id="game" name="title" value="game">
+        <label for="Male">Play Game</label>
+        <input type="radio" id="football" name="title" value="football">
+        <label for="Female">Football</label>
+        <input type="radio" id="music" name="title" value="music">
+        <label for="Female">Listen music</label>
+        <br>
+
+        <button type="submit" id="submitBtn">Submit</button>
+    </form>
+    <script src="day13_formValidate.js"></script>
+</body>
+
+</html>

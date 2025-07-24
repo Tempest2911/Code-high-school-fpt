@@ -1,0 +1,12 @@
+table, th, td {
+    border-collapse: collapse;
+    text-align: center;
+    height: 60px;
+    width: 553px;
+    border: 1px solid green;
+  }
+
+  .white>th{
+    height: 40px;
+    border-bottom: none;
+  }

@@ -1,0 +1,90 @@
+  ¬í sr java.util.ArrayListxÒ™Ça I sizexp   w java.util.ArrayListxÒ™Ça I sizexp   w   sr Lab5.StudentüfÍk=Ê] D marksL majort Ljava/lang/String;L nameq ~ xp@      t CNTTt Tuáº¥nsq ~ @      t TKTWt CÆ°á»ngsq ~ @!      q ~ t Háº¡nhx3:12 PM 3/31/20253:12 PM 3/31/20253:12 PM 3/31/20253:12 PM 3/31/20253:12 PM 3/31/20253:12 PM 3/31/2025
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ public void writeFile() {
+        File file = new File("skibidi.txt");
+        try {
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            try (FileOutputStream fos = new FileOutputStream(file); ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+                for (Model model : list) {
+                    oos.writeObject(model);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void readFile() {
+        File file = new File("skibidi.txt");
+        try {
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            list.clear();
+            try (FileInputStream fis = new FileInputStream(file); ObjectInputStream ois = new ObjectInputStream(fis)) {
+                while (fis.available() > 0) {
+                    list.add((Model) ois.readObject());
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void edit(Model m) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getId() == m.id) {
+                list.set(i, m);
+            }
+        }
+    }
+
+    public void delete(Model m) {
+        Model mxoa = null;
+        for (Model model : list) {
+            if (model.getId() == m.id) {
+                mxoa = model;
+            }
+        }
+        list.remove(mxoa);
+    }
+
+    public ArrayList<Model> Search(String name) {
+        ArrayList<Model> listSearch = new ArrayList<>();
+        for (Model model : list) {
+            if (model.getName().contains(name)) {
+                listSearch.add(model);
+            }
+        }
+        return listSearch;
+    }
+
+    public void sort() {
+        list.sort(Comparator.comparing(Model::getName));
+    }

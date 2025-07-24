@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Order.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://kit.fontawesome.com/3dea816c59.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/banner.png" style="width: 100%;" alt="banner">
+        <div class="banner">
+            <h1 class="title">Chi's Cake</h1>
+        </div>
+    </header>
+    <label for="navMobileInput" class="navBar">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html ">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="Order.html">Order</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="About.html">About</a></li>
+        </ul>
+    </nav>
+
+    <input type="checkbox" hidden name="" id="navMobileInput" class="navInput">
+
+    <label for="navMobileInput" class="navOverlay"></label>
+
+    <nav class="navMobile">
+        <label for="navMobileInput" class="navCloseBtn">
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+        <div class="navbarMobile">
+            <ul class="navMobileList">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="Order.html">Order</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br><br>
+
+    <main style="margin-left: 100px;">
+
+        <nav class="OrderTable">
+
+            <h1>Order now</h1>
+            <hr width="725px"><br>
+
+            <nav class="nana">
+                <label for="" style="position: absolute;">Cake name:</label>
+                <select name="" id="cakename" class="textt">
+                    <option value="">----Select cake----</option>
+                    <option value="">Classic Yellow Cake</option>
+                    <option value="">Coconut Bundt Cake</option>
+                    <option value="">Cream Cheese Pound Cake</option>
+                    <option value="">German Chocolate Cake</option>
+                </select>
+                <p id="errcakename" class="error"></p> <br>
+            </nav>
+
+            <nav class="nana">
+                <label for="" style="position: absolute;">Your name: </label>
+                <input type="text" class="textt" placeholder="Please enter your full name" id="name"
+                    onchange="checkname()">
+                <p id="errname" class="error"></p><br>
+            </nav>
+
+            <nav class="nana">
+                <label for="" style="position: absolute">Message: </label>
+                <input type="message" class="textt" placeholder="Please enter your message" id="message"
+                    onchange="checkmess()">
+                <p id="errmess" class="error"></p><br>
+            </nav>
+
+            <nav class="nana">
+                <label for="" style="position: absolute;">Includes: </label>
+                <input type="checkbox" class="box" name="Includes" id="" value="Candle"
+                    onchange="checkIncludes()">Candle <br>
+                <input type="checkbox" class="box" name="Includes" id="" value="Firework"
+                    onchange="checkIncludes()">Firework <br>
+                <input type="checkbox" class="box" name="Includes" id="" value="Toys" onchange="checkIncludes()">Toys
+                <p id="errIncludes" class="error"></p><br>
+            </nav>
+
+            <nav class="nana">
+                <label for="" style="position: absolute;">Deliver date: </label>
+                <input type="date" style="color: brown;" class="textt" name="" id="Datee" onchange="checkDate()">
+                <p id="errDate" class="error"></p><br>
+            </nav>
+
+            <nav class="nana">
+                <label for="" style="position: absolute;">Deliver to: </label>
+                <textarea name="" class="textt" type="text" id="DeliverTo" onchange="checkDeliverTo()"></textarea>
+                <p id="errDeliverTo" class="error"></p><br>
+            </nav>
+
+            <nav class="nana">
+                <label for="" style="position: absolute;">Call before deliver?</label>
+                <input type="radio" class="box" name="choose" id="yes" value="Yes" onchange="checkCall()">Yes
+                <input type="radio" style="height: 30px; width: 50px;" name="choose" id="no" value="Yes"
+                    onchange="checkCall()">No
+                <p id="errCall" class="error"></p><br>
+            </nav>
+
+            <nav>
+                <button id="order" onclick="order()">Order now</button>
+            </nav>
+
+        </nav>
+    </main>
+    <br>
+    <hr><br>
+    <footer style="text-align: center;">@ 2023 by Chi's Cake</footer><br>
+    <script src="Js/responsive.js"></script>
+
+    <script src="Js/Order.js"></script>
+</body>
+
+</html>

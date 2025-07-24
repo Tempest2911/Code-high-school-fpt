@@ -1,0 +1,20 @@
+Viết chương trình cho phép người dùng có thể đăng nhập vào ứng dụng soạn thảo. Các tài khoản lưu ở 
+trong file taikhoan.txt với mỗi dòng trong taikhoan.txt chứa một tài khoản. (làm thêm tính năng 
+đăng kí, sử dụng ảnh nếu thích - không bắt buộc)
+Viết chương trình cho phép người dùng có thể đăng nhập vào ứng dụng soạn thảo. Các tài khoản lưu ở 
+trong file taikhoan.txt với mỗi dòng trong taikhoan.txt chứa một tài khoản. (làm thêm tính năng 
+đăng kí, sử dụng ảnh nếu thích - không bắt buộc)Viết chương trình cho phép người dùng có thể đăng nhập vào ứng dụng soạn thảo. Các tài khoản lưu ở 
+trong file taikhoan.txt với mỗi dòng trong taikhoan.txt chứa một tài khoản. (làm thêm tính năng 
+đăng kí, sử dụng ảnh nếu thích - không bắt buộc)Viết chương trình cho phép người dùng có thể đăng nhập vào ứng dụng soạn thảo. Các tài khoản lưu ở 
+trong file taikhoan.txt với mỗi dòng trong taikhoan.txt chứa một tài khoản. (làm thêm tính năng 
+đăng kí, sử dụng ảnh nếu thích - không bắt buộc)Viết chương trình cho phép người dùng có thể đăng nhập vào ứng dụng soạn thảo. Các tài khoản lưu ở 
+trong file taikhoan.txt với mỗi dòng trong taikhoan.txt chứa một tài khoản. (làm thêm tính năng 
+đăng kí, sử dụng ảnh nếu thích - không bắt buộc)Viết chương trình cho phép người dùng có thể đăng nhập vào ứng dụng soạn thảo. Các tài khoản lưu ở 
+trong file taikhoan.txt với mỗi dòng trong taikhoan.txt chứa một tài khoản. (làm thêm tính năng 
+đăng kí, sử dụng ảnh nếu thích - không bắt buộc)Viết chương trình cho phép người dùng có thể đăng nhập vào ứng dụng soạn thảo. Các tài khoản lưu ở 
+trong file taikhoan.txt với mỗi dòng trong taikhoan.txt chứa một tài khoản. (làm thêm tính năng 
+đăng kí, sử dụng ảnh nếu thích - không bắt buộc)Viết chương trình cho phép người dùng có thể đăng nhập vào ứng dụng soạn thảo. Các tài khoản lưu ở 
+trong file taikhoan.txt với mỗi dòng trong taikhoan.txt chứa một tài khoản. (làm thêm tính năng 
+đăng kí, sử dụng ảnh nếu thích - không bắt buộc)Viết chương trình cho phép người dùng có thể đăng nhập vào ứng dụng soạn thảo. Các tài khoản lưu ở 
+trong file taikhoan.txt với mỗi dòng trong taikhoan.txt chứa một tài khoản. (làm thêm tính năng 
+đăng kí, sử dụng ảnh nếu thích - không bắt buộc)

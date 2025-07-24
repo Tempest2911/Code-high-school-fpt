@@ -1,0 +1,160 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(168, 197, 213);
+    height: 200px;
+    text-align: center;
+}
+
+header>img {
+    height: 150px;
+    margin-top: 20px;
+}
+
+nav {
+    width: 100%;
+    background-color: rgb(11, 58, 126);
+    height: 90px;
+    display: inline-block;
+}
+
+.text {
+    color: white;
+    display: inline-flex;
+
+
+
+}
+
+.text>a {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: -0px;
+    text-decoration: none;
+    color: white;
+}
+
+.text>a:hover {
+    background-color: white;
+    color: rgb(11, 58, 126);
+    text-decoration: underline;
+
+}
+
+.form {
+    text-align: right;
+    padding-top: -100px;
+    display: inline-flex;
+    padding-left: 400px;
+    margin-top: 10px;
+}
+
+article {
+    width: 100%;
+
+}
+
+.banner>img {
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 98%;
+}
+
+.main {
+    width: 100%;
+    border: 2px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-flex;
+}
+
+.main:hover {
+    box-shadow: 5px 5px 5px 5px black;
+}
+
+.main2:hover {
+    box-shadow: 5px 5px 5px 5px black;
+}
+
+.main3:hover {
+    box-shadow: 5px 5px 5px 5px black;
+}
+
+b:hover {
+    text-shadow: 3px 2px black;
+}
+
+.main>img {
+    height: 500px;
+    padding: 50px;
+
+    padding-left: 260px;
+}
+
+.main>p {
+    padding: 20px;
+    font-size: 40px;
+    width: 800px;
+}
+
+.main2 {
+    width: 100%;
+    border: 2px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main2>img {
+    height: 500px;
+    padding: 50px;
+
+}
+
+.main2>p {
+    padding: 20px;
+    font-size: 40px;
+    width: 800px;
+}
+
+.main3 {
+    width: 100%;
+    border: 2px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-flex;
+}
+
+.main3>img {
+    height: 500px;
+    padding: 50px;
+    clear: both;
+    padding-left: 280px;
+}
+
+.main3>p {
+    padding: 20px;
+    font-size: 40px;
+    width: 800px;
+}
+
+footer {
+    height: 200px;
+    background-color: rgb(188, 213, 244);
+    clear: both;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer>p {
+    color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100px;
+    padding-top: 50px;
+}

@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "Dancing";
+    src: url(static/DancingScript-Regular.ttf);
+    font-weight: 400;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Dancing";
+    font-weight: 400;
+    font-size: 30px;
+    color: brown;
+}
+
+
+.title {
+    font-size: 100px;
+    position: absolute;
+    width: 100%;
+    background-color: hsla(0, 0%, 40%, 0.5);
+    text-align: center;
+    top: 600px;
+    color: rgb(255, 255, 255);
+}
+
+li {
+    display: inline;
+    margin-right: 5px;
+}
+
+.error{
+    color: red;
+}
+
+.textt{
+    height: 45px;
+    width: 400px;
+    font-family: "Dancing";
+    margin-left: 230px;
+    font-size: 25px;
+    border: solid brown;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.nana{
+    font-size: 45px;
+}
+
+#send{
+    background-color: hsl(0, 59%, 40%);
+    color: white;
+    height: 50px;
+    width: 120px;
+    font-size: 20px;
+    font-family: "Dancing";
+    margin-left: 230px;
+    border-radius: 5px ;
+    border: none;
+}
+
+#send:hover{
+    background-color: hsl(0, 59%, 50%);
+    
+}
+#send:active{
+    background-color: hsl(0, 59%, 60%);
+    
+}
+
+main{
+    margin-left: 100px;
+}
+
+#messagee{
+    resize: both; overflow: auto; height: 150px; width: 400px; margin-bottom: -30px;
+}
+
+
+
+
+

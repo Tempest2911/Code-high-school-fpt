@@ -1,0 +1,10 @@
+strong{
+    color: violet;
+    font-size: 15px;
+}
+a:hover{
+    color: chocolate;
+}
+a{
+    text-decoration: none;
+}

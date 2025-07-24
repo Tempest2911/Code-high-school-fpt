@@ -1,0 +1,121 @@
+.container {
+    width: 70%;
+    height: 1600px;
+    padding: 0;
+    margin: 0 auto;
+    ;
+}
+
+header {
+    width: 100%;
+    height: 450px;
+    border: 1px solid black;
+    background-color: rgb(254, 250, 241);
+}
+
+nav {
+    width: 100%;
+    height: 150px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+nav>p {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    font-size: 70px;
+    color: rgb(240, 114, 41);
+    margin: 35px;
+}
+
+.banner>img {
+    width: 100.1%;
+}
+
+.look {
+    padding-bottom: 0px;
+    border: 2px solid black;
+    text-align: center;
+    height: 200px;
+    width: 100%;
+}
+
+.no {
+    height: 70px;
+    background-color: rgb(255, 145, 76);
+    border: 1px solid black;
+    width: 100%;
+}
+
+.vinh {
+    width: 100%;
+    height: 1100px;
+    border: 1px solid black;
+    background-color: rgb(254, 250, 241);
+}
+
+.vinh>img {
+    position: absolute;
+    float: left;
+    margin-top: 150px;
+    margin-left: 100px;
+}
+
+.vinh>p {
+    font-size: 50px;
+    width: 45%;
+    text-align: left;
+    float: right;
+    margin-top: 300px;
+}
+
+.bigdiv {
+    width: 100%;
+    height: 1200px;
+    border: 1px solid black;
+    background-color: rgb(255, 145, 76);
+}
+
+.vinh2{
+    background-color: antiquewhite;
+    height: 1000px;
+    margin-top: 120px;
+     width: 90%;
+     margin-left: 120px;
+}
+
+.vinh2>img {
+    float: right;
+    margin-top: 150px;
+    margin-right: 100px;
+    height: 550px;
+}
+
+.vinh2>p {
+    font-size: 50px;
+    width: 50%;
+    text-align: left;
+    float: left;
+    margin-top: 300px;
+    margin-left: 100px;
+}
+
+footer{
+    width: 100%;
+    height: 500px;
+    text-align: center;
+}
+
+footer{
+    width: 100%;
+    height: 200px;
+    border: 1px solid black; 
+    background-color: rgb(254, 250, 241);
+}
+
+footer>h1{
+    padding: 40px;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(241, 111, 35);
+}

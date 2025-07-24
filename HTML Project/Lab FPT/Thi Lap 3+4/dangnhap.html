@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body style="background-color: rgb(170, 170, 170);">
+    <header>
+        <div class="login">
+            <a href="dangnhap.html">Đăng Nhập</a>
+            <a href="#">Đăng Ký</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="#">SẮP XUẤT BẢN</a></li>
+            <li><a href="#">GIẢM GIÁ</a>
+                <ul class="drop">
+                    <li><a style="padding-right: 160px;" href="#">NGOẠI VĂN</a></li>
+                    <li><a style="padding-right: 50px;" href="#">NXB KIM ĐỒNG</a></li>
+                </ul>
+            </li>
+            <li><a href="#">TÁC GIẢ</a></li>
+        </ul>
+    </nav>
+
+    <aside>
+        <ul>
+            <li style="margin-top: 300px;">Tiểu Thuyết</li>
+            <li>Văn Học Kinh Điển</li>
+            <li>Tâm Lý Học</li>
+            <li>Triết Học</li>
+        </ul>
+    </aside>
+
+    <article>
+        <form action="">
+            <label for="name">Username </label>
+            <input type="text" placeholder="Your name" required style="font-size: 50px;">
+            <br>
+            <label for="password">Password  </label>
+            <input type="password" required style="font-size: 50px; margin-left: 13px;"> 
+            <br>
+            <label for="country-select">Country</label>
+            <select id="country-select" style="font-size: 50px; margin-left: 47px; padding-right: 30px;" >
+                <option value="Vietnam">Việt Nam</option>
+                <option value="China">Trung Quốc</option>
+                <option value="SouthKorea">Hàn Quốc</option>
+                <option value="Japan">Nhật Bản</option>
+            </select>
+            <br>
+            <input type="checkbox" class="check">
+            <label for="verify">Click here to Verify</label>
+            <br>
+            <input type="button" value="Login" style="font-size: 50px;" class="button">
+        </form>
+    </article>
+
+    <footer>
+        <img src="image/logo.jpg" alt="">
+
+        <div class="text">
+            <p>Hỗ trợ khách hàng</p>
+            <p>Hotline: <ins>1900-6035 </ins> (1000đ/phút, 8-12h kể cả T7, CN)</p>
+            <p>Hỗ trợ khách hàng: <ins>SIGMAOHIO@thug.com</ins> </p>
+            <p>Báo lỗi bảo mật: <ins>sercurity@nigga.vn</ins> </p>
+        </div>
+    </footer>
+</body>
+
+</html>

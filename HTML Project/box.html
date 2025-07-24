@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="box.css">
+</head>
+
+<body class="container">
+
+    <!--
+        Tạo Layout:
+        1.Header
+        2.Navigation (nav)
+        3.Aside (Bên trái hoặc phải hoặc both)
+        4.Acticle/Main (Phần nội dung chính) (Main > article)
+        5.Footer
+    -->
+
+    <!--
+        Static: Mặc định, cố định theo màn hình(ko thể chỉnh)
+        Fix: fix theo vị trí của màn hình, scroll thì vẫn nằm ở vị trí đó
+        Relative: Tương đối (Thường dùng thẻ cha)
+        absolute: Tuyệt đối(Thường dùng cho thẻ con, định vị vị trí cụ thể)
+    -->
+
+    <header>
+        <img src="Image/FPT_Polytechnic_3.jpg" alt="fpt">
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="trangchu.html">Trang Chủ </a>
+                <ul class="dropdown">
+                    <li><a href="ganket.html">Gắn kết cộng đồng</a></li>
+                </ul>
+            </li>
+            <li><a href="gioithieu.html"> Giới Thiệu </a></li>
+            <li><a href="gopy.html"> Góp Ý </a></li>
+            <li><a href="lienhe.html"> Liên Hệ</a></li>
+        </ul>
+
+    </nav>
+
+    <article>
+        <p>
+            <img src="image/a388a09fc6ccb7b935a68d6fcb8ba044.gif">
+            <img src="image/a388a09fc6ccb7b935a68d6fcb8ba044.gif">
+            <img src="image/a388a09fc6ccb7b935a68d6fcb8ba044.gif">
+            <img src="image/a388a09fc6ccb7b935a68d6fcb8ba044.gif">
+            <br>
+            <img src="image/attachment.gif">
+            <img src="image/attachment.gif">
+            <img src="image/attachment.gif">
+            <img src="image/attachment.gif">
+        </p>
+    </article>
+
+    <aside>
+
+        <ul>
+            <li> <a href="#">Máy tính xách tay</a> </li>
+        </ul>
+        <ul>
+            <li> <a href="#">Điện thoại di động</a> </li>
+        </ul>
+        <ul>
+            <li> <a href="#">Máy quay phim</a> </li>
+        </ul>
+        <ul>
+            <li> <a href="#">Máy chụp ảnh</a> </li>
+        </ul>
+        <ul>
+            <li> <a href="#">Hỏi Đáp</a> </li>
+        </ul>
+
+    </aside>
+
+    <footer>
+        FPT POLYTECHNIC 2024 @ ALL RIGHT RESERVED
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    img {
+        height: 500px;
+
+    }
+
+    #me {
+        border: 2px solid;
+        padding: 30px;
+        width: 30%;
+        margin-left: 800px;
+
+    }
+
+    #chuyenanh {
+        width: 100%;
+    }
+
+    .error{
+        color: red;
+    }
+
+    #formm{
+        border: 2px solid;
+        width: 15%;
+        padding: 30px;
+    }
+</style>
+
+<body>
+
+    <div style="text-align: center;" id="chuyenanh">
+        <div id="me">
+            <h1>SLIDE SHOW TỰ ĐỘNG CHẠY</h1>
+            <img src="image/capy.gif" id="slide" alt="">
+        </div>
+
+    </div>
+
+    <div id="formm">
+        <h1 style="text-align: center;">HÓA ĐƠN</h1>
+        <form action="">
+            <div>
+                <label for="">Khách hàng</label>
+                <input type="text" id="name">
+                <span id="errname" class="error"></span>
+            </div>
+
+            <div>
+                <label for="">Loại hàng</label>
+                <select name="" id="items" onchange="doigia()">
+                    <option value="1">Loại 1</option>
+                    <option value="2">Loại 2</option>
+                    <option value="3">Loại 3</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">Đơn giá</label>
+                <input type="text" id="price" disabled value="500000">
+            </div>
+
+            <div>
+                <label for="">Số lượng</label>
+                <input type="text" id="quanity">
+                <span id="errquanity" class="error"></span>
+            </div>
+
+            <div>
+                <label for="">Thành tiền</label>
+                <input type="text" id="money" disabled>
+                <span id="errmoney" class="error"></span>
+            </div>
+
+            <div>
+                <label for="">Nơi nhận hàng</label>
+                <input type="radio" name="address" id="nhan1" onchange="doiphi()">
+                <label for="">Nội thành</label>
+                <input type="radio" name="address" id="nhan2" onchange="doiphi()">
+                <label for="">Ngoại thành</label>
+                <span id="errnhan" class="error"></span>
+            </div>
+
+            <div>
+                <label for="">Phí vận chuyển</label>
+                <input type="text" id="ship" disabled>
+            </div>
+
+            <div>
+                <button type="button" onclick="buy(event)">Đặt Mua</button>
+            </div>
+
+        </form>
+    </div>
+
+
+    <script src="thi.js"></script>
+</body>
+
+</html>

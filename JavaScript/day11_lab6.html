@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="submitBtn(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" maxlength="16" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" maxlength="10" required><br><br>
+        <label for="hocLuc">Học lực:</label>
+        <select id="hocLuc" name="hocLuc">
+            <option id="pass" value="pass">Pass</option>
+            <option id="fail" value="fail">Fail</option>
+        </select><br><br>
+        <div><span id="result"></span></div>
+        <input type="submit" value="Submit" onclick="submitBtn()">
+        <div id="display">
+            <p id="tc"></p>
+            <p > <span id="displayUser"></span></p>
+            <p > <span id="displayPass"></span></p>
+            <p > <span id="displayScore"></span></p>
+        </div>
+    </form>
+    <script src="day11_lab6.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+.container {
+    width: 100%;
+    height: 2000px;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.container>img{
+    display: block;
+    position: absolute;
+    margin-left: 1100px;
+    padding-top: 20px;
+
+}
+
+header {
+    width: 100%;
+    height: 1250px;
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+    font-size: 100px;
+}
+
+header img {
+    width: 100%;
+    height: 1320px;
+}
+
+.nig {
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    padding: 0;
+    background-color: #ff7300;
+    font-size: 70px;
+    text-align: center;
+
+
+}
+
+.nig>ul {
+    list-style: none;
+    background: #ff7300;
+
+}
+
+.nig>ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.nig>ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 35px;
+    color: rgb(255, 255, 255);
+}
+
+.nig>ul li ul.dropdown {
+    width: 170%;
+    position: absolute;
+    display: none;
+    background-color: #ff7300;
+}
+
+.nig>ul li:hover ul.dropdown {
+    display: block;
+}
+
+.nig>ul li a:hover {
+    background-color: rgb(255, 255, 255);
+    color: #ff7300;
+
+}
+
+
+
+article {
+    width: 100%;
+    height: 150%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    float: left;
+
+}
+
+article h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+article p{
+    font-size: 40px;
+    text-align: left;
+        margin-left: 300px;
+        margin-right: 300px;
+}
+
+article ul li{
+    font-size: 40px;
+    text-align: left;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+article img{
+    display: block;
+
+    margin-left: 800px;
+    margin-right: 600px;
+    height: 800px;
+}
+
+
+footer {
+    width: 92%;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(40, 41, 86);
+    clear: both;
+    font-size: 50px;
+    text-align: center;
+    padding: 100px;
+    border-top: 20px solid orange;
+}
+
+footer>img{
+    margin-right: 1000px;
+    position: relative;
+    height: 150px;
+
+}
+
+.thongtin{
+    
+    margin-left: 420px;
+    font-size: 50px;
+    text-align: left;                                                               
+}
+
+.thongti{
+    margin-left: 420px;
+    font-size: 40px;
+    text-align: left;
+}
+.hethong{
+    margin-left: 1000px;
+    position: absolute;
+    font-size: 50px;
+}
+
+.hethon{
+    padding-top: 70px;
+    margin-left: 1000px;
+    position: absolute;
+    font-size: 50px;
+    text-decoration:underline;
+}
+
+.diachi{
+    padding-top: 160px;
+    text-align: left;
+    margin-left: 1000px;
+    position: absolute;
+        font-size: 40px;
+        width: 770px;
+}
+
+.sdt{
+    padding-top: 365px;
+    text-align: left;
+    margin-left: 1000px;
+    position: absolute;
+        font-size: 40px;
+        width: 770px;
+}
+
+p>img{
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: yellow;
+    box-shadow: 5px 5px 5px  blue;
+}
+
+p>img:hover{
+    box-shadow: 20px 20px 20px red;
+    background-color: aqua;
+}
+
+iframe{
+    margin-left: 1000px;
+    height: 500px;
+    margin-top: 60px;
+}

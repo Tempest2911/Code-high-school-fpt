@@ -1,0 +1,90 @@
+  ¬í sr java.util.ArrayListxÒ™Ça I sizexp   w   sr Lab5.StudentüfÍk=Ê] D marksL majort Ljava/lang/String;L nameq ~ xp@      t CNTTt Tuáº¥nsq ~ @      t TKTWt CÆ°á»ngsq ~ @!      q ~ t Háº¡nhx3:12 PM 3/31/20253:12 PM 3/31/20253:12 PM 3/31/20253:12 PM 3/31/20253:12 PM 3/31/20253:12 PM 3/31/2025¬íjava.util.ArrayListxÒ™Ça I sizexp   w   sr Lab5.StudentüfÍk=Ê] D marksL majort Ljava/lang/String;L nameq ~ xp@      t CNTTt Tuáº¥nsq ~ @      t TKTWt CÆ°á»ngsq ~ @!      q ~ t Háº¡nhx3:12 PM 3/31/20253:12 PM 3/31/20253:12 PM 3/31/20253:12 PM 3/31/20253:12 PM 3/31/20253:12 PM 3/31/2025
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  public void FillTableData(ArrayList<Model> m) {
+        DefaultTableModel defaultTableModel = (DefaultTableModel) tblSP.getModel();
+        defaultTableModel.setRowCount(0);
+        for (Model model : m) {
+            defaultTableModel.addRow(new Object[]{
+                model.getId(),
+                model.getName(),
+                model.getBrand(),
+                model.getPrice(),
+                model.getStatus(),
+                model.getQuantity()
+            });
+        }
+    }
+
+    public Model readForm() {
+        return new Model(
+                Integer.parseInt(txtID.getText()),
+                txtName.getText(),
+                cboBrand.getSelectedItem().toString(),
+                Double.parseDouble(txtPrice.getText()),
+                rdoCon.isSelected() ? "Còn hàng" : "Hết hàng",
+                Integer.parseInt(txtQuantity.getText()));
+    }
+
+    public void showrow(int index) {
+        txtID.setText(tblSP.getValueAt(index, 0).toString());
+        txtName.setText(tblSP.getValueAt(index, 1).toString());
+        cboBrand.setSelectedItem(tblSP.getValueAt(index, 2).toString());
+        txtPrice.setText(tblSP.getValueAt(index, 3).toString());
+        if (tblSP.getValueAt(index, 4).toString().equals("Còn hàng")) {
+            rdoCon.setSelected(true);
+        } else {
+            rdoHet.setSelected(true);
+        }
+        txtQuantity.setText(tblSP.getValueAt(index, 5).toString());
+    }
+
+    public boolean checkLoi() {
+
+        if (txtID.getText().isEmpty() || txtName.getText().isEmpty() || txtPrice.getText().isEmpty() || txtQuantity.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Phải diền đầy đủ thông tin");
+            return true;
+        }
+
+        if (!txtID.getText().matches("\\d+")) {
+            JOptionPane.showMessageDialog(this, "ID chỉ được chứa số");
+            return true;
+        }
+
+        if (txtName.getText().matches(".*\\d.*")) {
+            JOptionPane.showMessageDialog(this, "Tên ko đc chứa số");
+            return true;
+        }
+
+        if (!txtPrice.getText().matches("\\d+")) {
+            JOptionPane.showMessageDialog(this, "Giá chỉ được chứa số");
+            return true;
+        }
+
+        if (!txtQuantity.getText().matches("\\d+")) {
+            JOptionPane.showMessageDialog(this, "Số lượng chỉ được chứa số");
+            return true;
+        }
+
+        return false;
+    }

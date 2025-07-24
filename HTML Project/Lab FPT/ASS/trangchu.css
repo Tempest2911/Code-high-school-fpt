@@ -1,0 +1,242 @@
+.container {
+    width: 100%;
+    height: 2000px;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.container>img {
+    display: block;
+    position: absolute;
+    margin-left: 1100px;
+    padding-top: 20px;
+
+}
+
+header {
+    width: 100%;
+    height: 1250px;
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+    font-size: 100px;
+}
+
+header img {
+    width: 100%;
+    height: 1320px;
+}
+
+nav {
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    padding: 0;
+    background-color: #ff7300;
+    font-size: 70px;
+    text-align: center;
+
+
+}
+
+ul {
+    list-style: none;
+    background: #ff7300;
+
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 35px;
+    color: rgb(255, 255, 255);
+}
+
+ul li ul.dropdown {
+    width: 170%;
+    position: absolute;
+    display: none;
+
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+ul li a:hover {
+    background-color: rgb(255, 255, 255);
+    color: #ff7300;
+
+}
+
+
+
+article {
+    width: 70%;
+    height: 2896px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    float: left;
+}
+
+article h1 {
+    font-size: 70px;
+    text-align: center;
+}
+
+
+
+aside {
+    width: 30%;
+    height: 70%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(137, 137, 137);
+    float: right;
+    font-size: 50px;
+
+
+}
+
+aside>img {
+    width: 100%;
+    height: 103%;
+}
+
+footer {
+    width: 92%;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(40, 41, 86);
+    clear: both;
+    font-size: 50px;
+    text-align: center;
+    padding: 100px;
+    border-top: 20px solid orange;
+}
+
+footer>img {
+    margin-right: 1000px;
+    position: relative;
+    height: 150px;
+
+}
+
+.thongtin {
+
+    margin-left: 420px;
+    font-size: 50px;
+    text-align: left;
+}
+
+.thongti {
+    margin-left: 420px;
+    font-size: 40px;
+    text-align: left;
+}
+
+.hethong {
+    margin-left: 1000px;
+    position: absolute;
+    font-size: 50px;
+}
+
+.hethon {
+    padding-top: 70px;
+    margin-left: 1000px;
+    position: absolute;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+.diachi {
+    padding-top: 160px;
+    text-align: left;
+    margin-left: 1000px;
+    position: absolute;
+    font-size: 40px;
+    width: 770px;
+}
+
+.sdt {
+    padding-top: 365px;
+    text-align: left;
+    margin-left: 1000px;
+    position: absolute;
+    font-size: 40px;
+    width: 770px;
+}
+
+p>img {
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: yellow;
+    box-shadow: 5px 5px 5px blue;
+}
+
+p>img:hover {
+    box-shadow: 20px 20px 20px red;
+    background-color: aqua;
+}
+
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.stat-item {
+    text-align: center;
+    max-width: 300px;
+}
+
+.stat-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.stat-item h3 {
+    font-size: 50px;
+    margin: 10px;
+    color: #d32f2f;
+}
+
+.stat-item p {
+    font-size: 25px;
+    color: #555;
+}
+
+.nghanh {
+    padding: 160px;
+
+    width: 500px;
+    height: 400px;
+    float: left;
+    margin-top: -100px;
+
+}
+
+.nghanh>p {
+    text-align: center;
+    text-decoration: none;
+    font-size: 35px;
+    margin-left: 70px;
+    width: 85%;
+}
+
+.nghanh>p>a {
+    text-decoration: none;
+}

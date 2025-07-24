@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Username: </label>
+        <input type="text" id="userinput" onchange="validateuser()" onblur="validateuser()">
+        <div><span style="color: red;" id="errornoti"></span></div>
+
+        <label for="">Password: </label>
+        <input type="password" name="" id="passinput" onchange="validatepass()" onblur="validatepass()">
+        <div><span style="color: red;" id="errorpass"></span></div>
+
+        <label for="">Email: </label>
+        <input type="text" name="" id="inputemail" onchange="validateemail()" onblur="validateemail()">
+        <div><span style="color: red;" id="erroremail"></span></div>
+
+        <div onchange="validategender()" onblur="validategender()">
+            <label for="">Gender: </label>
+            
+            <input type="radio" name="gender" id="male" value="Male">
+            <label for="">Male</label>
+    
+            <input type="radio" name="gender" id="female" value="Female">
+            <label for="">Female</label>
+            <br>
+            <div><span style="color: red;" id="errorgender"></span></div>
+        </div>
+
+        <div>
+            <label for="">Chuyên Ngành: </label>
+            <input type="checkbox" name="major" id="tkdh" value="TKDH" onchange="validateMajor()" onblur="validateMajor()">
+            <label for="">TKDH</label>
+            <input type="checkbox" name="major" id="mk" value="MK" onchange="validateMajor()" onblur="validateMajor()">
+            <label for="">Marketing</label>
+            <input type="checkbox" name="major" id="it" value="IT" onchange="validateMajor()" onblur="validateMajor()">
+            <label for="">IT</label>
+            <div><span style="color: red;" id="errormajor"></span></div>
+        </div>
+
+        <div>
+            <label for="">Lớp:</label>
+            <select name="class" id="myclass">
+                <option value="SD1801">SD1801</option>
+                <option value="SD1802">SD1802</option>
+            </select>
+            <span id="errorClass"></span>
+        </div>
+        <div id="score">
+            <label for="">Điểm</label>
+            <input type="text" name="score" id="scoreinput" readonly>
+            <span id="errorScore"></span>
+        
+        </div>
+
+
+        <button type="submit" onclick="checkInfo(event)">Check Info</button>
+        
+    </form>
+    <script src="login.js"></script>
+</body>
+</html>

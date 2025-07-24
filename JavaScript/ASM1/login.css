@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 1000px;
+}
+
+header>img{
+    width: 100%;
+    height: 1000px;
+}
+
+.login {
+    padding-top: 10px;
+    font-size: 50px;
+    right: 0;
+    text-align: right;
+}
+
+.login>a {
+    text-decoration: none;
+    margin: 30px;
+}
+
+nav {
+    position: relative;
+    width: 100%;
+    height: 149px;
+    background-color: #191b1d;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 60px;
+
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 100px;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu li a {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    text-decoration: none;
+    padding: 40px;
+    color: rgb(193, 194, 194);
+}
+
+.menu li .drop {
+    position: absolute;
+    width: 151%;
+    background-color: #191b1d;
+    display: none;
+    text-align: left;
+    padding: 0;
+}
+
+
+.menu li:hover ul {
+    display: block;
+}
+
+.menu li a:hover {
+    background-color: rgb(193, 194, 194);
+    color: #191b1d;
+}
+
+aside ul {
+    float: left;
+    font-size: 60px;
+    text-align: left;
+    margin: 70px 50px 50px 50px;
+    width: 25%;
+    height: 920px;
+    background-color: rgb(52, 54, 56);
+    border-radius: 5%;
+}
+
+aside ul li {
+    margin-left: 60px;
+    margin-top: 50px;
+    color: #c1c2c2;
+}
+
+article {
+    text-align: center;
+    margin: 50px 50px 50px 50px;
+    width: 100%;
+    height: 800px;
+    border-radius: 5%;
+}
+
+article>form{
+    margin-left: 750px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgb(52, 54, 56);
+    border-radius: 20px;
+    width: 40%;
+}
+
+
+.book1 {
+    font-size: 40px;
+    text-align: center;
+    background-color: rgb(52, 54, 56);
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    height: 400px;
+    float: left;
+}
+
+footer {
+    width: 100%;
+    background-color: #191b1d;
+    height: 350px;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+footer img {
+    position: absolute;
+    margin: 50px 30px 0px 100px;
+}
+
+footer .text {
+    position: absolute;
+    margin: 100px 300px 900px 500px;
+    font-size: xx-large;
+    color: #c1c2c2;
+
+}

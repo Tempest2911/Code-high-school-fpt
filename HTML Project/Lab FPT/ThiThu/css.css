@@ -1,0 +1,106 @@
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    height: 2560px;
+}
+
+header{
+    width: 100%;
+    height: 400px;
+    background-color: rgb(188, 213, 244);
+    text-align: center;
+}
+
+header>img{
+    height: 280px;
+    margin-top: 50px;
+}
+
+nav{
+    width: 100%;
+    background-color: rgb(50, 50, 50);
+    height: 150px;
+}
+
+.text1>form{
+    display: inline;
+    color: white;
+    text-align: right;
+    padding-left: 150px;
+}
+
+.text1>p{
+    display: inline-flex;
+    color: white;
+    padding: 20px;
+    font-size: 40px;
+    padding-left: 70px;
+}
+
+.text1>p:hover{
+    text-decoration: underline;
+}
+
+.banner>img{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.anh1{
+    width: 100%;
+    border: 2px solid black;
+    height: 1100px;
+    
+}
+.anh1>img{
+    height: 1000px;
+    position: absolute;
+    padding: 50px;
+}
+
+.textanh1{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 200px;
+    text-align: left;
+    float: right;
+    font-size: 50px;
+    width: 900px;
+}
+
+.smallbox{
+    text-align: center;
+    width: 100%;
+}
+
+.small{
+    font-size: 40px;
+    text-align: center;
+    border: 2px solid black;
+    width: 750px;
+    height: 900px;
+    display: inline-block;
+
+    margin: 30px;
+    padding: 40px;
+}
+
+.small>img{
+    
+    height: 500px;
+}
+
+.text{
+    color: brown;
+}
+
+footer{
+    clear: both;
+    width: 100%;
+    background-color: rgb(0, 0, 123);
+    height: 200px;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+}

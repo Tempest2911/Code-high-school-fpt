@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASM1</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/3dea816c59.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: rgb(35, 37, 39);">
+    <header>
+        <img src="image/bhanner.png" alt="" id="sliderImg">
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="asm1.html">HOME</a></li>
+            <li><a href="#">CREATE</a>
+                <ul class="drop">
+                    <li><a style="padding-right: 160px;" href="#">THUG HUNTER</a></li>
+                    <li><a style="padding-right: 270px;" href="#">GAME</a></li>
+                </ul>
+            </li>
+            <li><a href="#">ROBUX</a></li>
+            <li><a href="login.html">Đăng Nhập</a></li>
+            <li><a href="login.html">Đăng Kí</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <form onsubmit=" event.preventDefault(); subBtn()">
+            <label for="name" style="font-size: 60px; color: #c1c2c2;">Username </label>
+            <input type="text" placeholder="Admin" style="font-size: 50px;"  required id="username">
+            <br>
+            <label for="password" style="font-size: 60px; color: #c1c2c2;">Password  </label>
+            <input type="password" style="font-size: 50px; margin-left: 13px;" minlength="6" maxlength="10"  required id="password"> 
+            <br>
+            <input type="checkbox" class="check" style="width: 40px; height: 40px;" required>
+            <label for="verify" style="font-size: 60px; color: #c1c2c2;">Click here to Verify</label>
+            <br>
+            <input type="submit" value="Login" style="font-size: 50px;">
+        </form> 
+    </article>
+
+    <footer>
+        <img src="image/logo.jpg" alt="">
+
+        <div class="text">
+            <p>©2024 Roblox Corporation. Roblox, the Roblox logo and Powering Imagination are among our registered and unregistered trademarks in the U.S. and other countries.</p>
+        </div>
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

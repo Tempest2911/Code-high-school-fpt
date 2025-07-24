@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập tổng hợp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- Bài Lab
+Tạo một trang HTML cơ bản với các yêu cầu sau:
+Tạo một trang HTML với tiêu đề là "Bài tập tổng hợp".
+Tạo một thẻ div có id là "content" và nội dung ban đầu là "Nội dung ban đầu".
+Tạo các nút bấm với id và chức năng sau:
+changeStyle: Đổi style của phần tử có id là "content".
+setAttribute: Đặt thuộc tính cho phần tử có id là "content".
+updateContent: Cập nhật nội dung HTML của phần tử có id là "content".
+createElement: Tạo một phần tử mới và thêm vào body.
+removeElement: Xóa phần tử mới tạo ra.
+Viết các hàm JavaScript để thực hiện các nhiệm vụ sau:
+Khi nhấn vào nút changeStyle:
+Thay đổi màu nền (backgroundColor) của phần tử div có id là "content" thành lightblue.
+Thay đổi màu chữ (color) thành white.
+Thay đổi kích thước chữ (fontSize) thành 20px.
+Khi nhấn vào nút setAttribute:
+Đặt thuộc tính tùy chỉnh data-custom với giá trị customValue cho phần tử div có id là "content".
+Khi nhấn vào nút updateContent:
+Thay đổi nội dung của phần tử div có id là "content" thành Nội dung đã được cập nhật.
+Khi nhấn vào nút createElement:
+Tạo một phần tử p mới với nội dung Đây là phần tử mới.
+Thêm phần tử này vào cuối của thẻ body.
+Khi nhấn vào nút removeElement:
+Xóa phần tử p mới tạo ra khỏi thẻ body. -->
+<body>
+    <h1 style="text-align: center; font-size: 50px;" >Bài tập tổng hợp</h1>
+
+    <div id="content">
+        <p>Nội dung ban đầu</p>
+    </div>
+
+    <button type="button" onclick="changStyle()">Change Style</button>
+    <button type="button" onclick="setAttributee()">Set Attribute</button>
+    <button type="button" onclick="upgradeContentt()">Upgrade Content</button>
+    <button type="button" onclick="createElementt()">Create Element</button>
+    <button type="button" onclick="removeElement()">Remove Element</button>
+
+    <div id="newtext">
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,503 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
+package Lab3;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import javax.swing.JOptionPane;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.table.DefaultTableModel;
+
+/**
+ *
+ * @author Lenovo
+ */
+public class QuanLySinhVien extends javax.swing.JFrame {
+
+    ArrayList<Student> list = new ArrayList<>();
+    Student s = new Student();
+
+    /**
+     * Creates new form QuanLySinhVien
+     */
+    public QuanLySinhVien() {
+        initComponents();
+        addStudent();
+        removeStudent();
+        updateStudent();
+        autoAdd();
+        FillTableData(getAll());
+
+        txtDiem.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                updateHocLuc();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                updateHocLuc();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                updateHocLuc();
+            }
+        });
+    }
+
+    private void updateHocLuc() {
+        try {
+            double diem = Double.parseDouble(txtDiem.getText());
+            if (diem >= 9) {
+                txtHocluc.setText("Giỏi");
+            } else if (diem >= 7) {
+                txtHocluc.setText("Khá");
+            } else if (diem >= 5) {
+                txtHocluc.setText("Trung bình");
+            } else if (diem >= 3) {
+                txtHocluc.setText("Yếu");
+            } else if (diem <= 2) {
+                txtHocluc.setText("Kém");
+            }
+
+            if (diem > 7.5) {
+                chkThuong.setSelected(true);
+            } else {
+                chkThuong.setSelected(false);
+            }
+        } catch (NumberFormatException ex) {
+            txtHocluc.setText(""); // Xóa nếu nhập sai
+        }
+    }
+
+    public ArrayList<Student> getAll() {
+        return list;
+    }
+
+    public void autoAdd() {
+        list.add(new Student("Playboi Carti", 10, "I AM MUSIC", "True"));
+        list.add(new Student("Tupac", 9, "Công nghệ thông tin", "True"));
+        list.add(new Student("Bình", 3.5, "Thiết kế đồ họa", "False"));
+    }
+
+    public void addStudent() {
+        if (txtHovaten.getText().isEmpty() || txtDiem.getText().isEmpty()) {
+            return;
+        } else if (Integer.parseInt(txtDiem.getText()) > 10) {
+            JOptionPane.showMessageDialog(this, "Điểm ko được trên 10");
+            return;
+        }
+
+        try {
+            Student sv = new Student();
+            sv.name = txtHovaten.getText();
+            sv.marks = Double.parseDouble(txtDiem.getText());
+            sv.major = (String) cboNganh.getSelectedItem();
+
+            list.add(sv);
+            txtHocluc.setText(sv.getGrade());
+            chkThuong.setSelected(sv.isBonus());
+
+            FillTableData(getAll());
+            JOptionPane.showMessageDialog(this, "Đã thêm học sinh thành công");
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Điểm không hợp lệ! Vui lòng nhập số.");
+        }
+    }
+
+    public void removeStudent() {
+        int index = tblTable.getSelectedRow();
+        if (index == -1) {
+            return;
+        }
+        list.remove(index);
+        FillTableData(getAll());
+        JOptionPane.showMessageDialog(this, "Xóa thành công");
+    }
+
+    public void updateStudent() {
+        int index = tblTable.getSelectedRow();
+        if (index == -1) {
+            return;
+        }
+
+        if (txtHovaten.getText().isEmpty() || txtDiem.getText().isEmpty()) {
+            return;
+        }
+
+        Student sv = list.get(index);
+        sv.name = txtHovaten.getText();
+        sv.marks = Double.parseDouble(txtDiem.getText());
+        sv.major = (String) cboNganh.getSelectedItem();
+
+        txtHocluc.setText(sv.getGrade());
+        chkThuong.setSelected(sv.isBonus());
+
+        JOptionPane.showMessageDialog(this, "Cập nhật thông tin thành công");
+        FillTableData(getAll());
+    }
+
+    public void FillTableData(ArrayList<Student> m) {
+        DefaultTableModel defaultTableModel = (DefaultTableModel) tblTable.getModel();
+        defaultTableModel.setRowCount(0);
+        for (Student model : m) {
+            defaultTableModel.addRow(new Object[]{
+                model.getName(),
+                model.getMarks(),
+                model.getMajor(),
+                model.getGrade(),
+                model.getReward()
+            });
+
+        }
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        txtHovaten = new javax.swing.JTextField();
+        txtDiem = new javax.swing.JTextField();
+        cboNganh = new javax.swing.JComboBox<>();
+        txtHocluc = new javax.swing.JTextField();
+        btnThem = new javax.swing.JButton();
+        btnSua = new javax.swing.JButton();
+        btnXoa = new javax.swing.JButton();
+        btnCapnhat = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblTable = new javax.swing.JTable();
+        btnDong = new javax.swing.JButton();
+        chkThuong = new javax.swing.JCheckBox();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setText("Quản lý sinh viên");
+
+        jLabel2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel2.setText("Họ và tên");
+
+        jLabel3.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel3.setText("Điểm");
+
+        jLabel4.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel4.setText("Ngành");
+
+        jLabel5.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel5.setText("Học lực");
+
+        txtHovaten.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+
+        txtDiem.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+
+        cboNganh.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        cboNganh.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Thiết kế đồ họa", "Công nghệ thông tin", "I AM MUSIC" }));
+
+        txtHocluc.setEditable(false);
+        txtHocluc.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        txtHocluc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtHoclucActionPerformed(evt);
+            }
+        });
+        txtHocluc.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtHoclucKeyReleased(evt);
+            }
+        });
+
+        btnThem.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        btnThem.setText("Add");
+        btnThem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnThemActionPerformed(evt);
+            }
+        });
+
+        btnSua.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        btnSua.setText("Edit");
+        btnSua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSuaActionPerformed(evt);
+            }
+        });
+
+        btnXoa.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        btnXoa.setText("Delete");
+        btnXoa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnXoaActionPerformed(evt);
+            }
+        });
+
+        btnCapnhat.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        btnCapnhat.setText("New");
+        btnCapnhat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCapnhatActionPerformed(evt);
+            }
+        });
+
+        tblTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Họ và tên", "Điểm", "Ngành", "Học lực", "Thưởng"
+            }
+        ));
+        tblTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblTableMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tblTable);
+
+        btnDong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        btnDong.setText("Close");
+        btnDong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDongActionPerformed(evt);
+            }
+        });
+
+        chkThuong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        chkThuong.setText("Có phần thưởng ?");
+
+        jButton1.setText("Sort by name");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Sort by Grade");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 256, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(238, 238, 238))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnThem)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSua)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnXoa)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnCapnhat)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnDong)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton2))
+                    .addComponent(chkThuong)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(txtHovaten, javax.swing.GroupLayout.DEFAULT_SIZE, 533, Short.MAX_VALUE)
+                        .addComponent(txtDiem)
+                        .addComponent(cboNganh, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtHocluc)))
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtHovaten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtDiem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(cboNganh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(txtHocluc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(chkThuong)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnThem)
+                    .addComponent(btnSua)
+                    .addComponent(btnXoa)
+                    .addComponent(btnCapnhat)
+                    .addComponent(btnDong)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(68, Short.MAX_VALUE))
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void btnDongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDongActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_btnDongActionPerformed
+
+    private void btnCapnhatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCapnhatActionPerformed
+        // TODO add your handling code here:
+        txtHovaten.setText("");
+        txtHocluc.setText("");
+        txtDiem.setText("");
+    }//GEN-LAST:event_btnCapnhatActionPerformed
+
+    private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemActionPerformed
+        if (txtHovaten.getText().isEmpty() || txtDiem.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Vui lòng điền đầy đủ");
+            return;
+        } else {
+            this.addStudent();
+            this.FillTableData(getAll());
+        }
+    }//GEN-LAST:event_btnThemActionPerformed
+
+    private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaActionPerformed
+        // TODO add your handling code here:
+        this.updateStudent();
+        this.FillTableData(getAll());
+    }//GEN-LAST:event_btnSuaActionPerformed
+
+    private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaActionPerformed
+        // TODO add your handling code here:
+        this.removeStudent();
+        this.FillTableData(getAll());
+    }//GEN-LAST:event_btnXoaActionPerformed
+
+    private void tblTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblTableMouseClicked
+        // TODO add your handling code here:ư
+        int selected = tblTable.getSelectedRow();
+        txtHovaten.setText(tblTable.getValueAt(selected, 0).toString());
+        txtDiem.setText(tblTable.getValueAt(selected, 1).toString());
+        cboNganh.setSelectedItem(tblTable.getValueAt(selected, 2).toString());
+        txtHocluc.setText(tblTable.getValueAt(selected, 3).toString());
+        if (tblTable.getValueAt(selected, 4).equals("True")) {
+            chkThuong.setSelected(true);
+        } else {
+            chkThuong.setSelected(false);
+        }
+    }//GEN-LAST:event_tblTableMouseClicked
+
+    private void txtHoclucActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHoclucActionPerformed
+
+    }//GEN-LAST:event_txtHoclucActionPerformed
+
+    private void txtHoclucKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtHoclucKeyReleased
+        Student s = new Student();
+        s.getGrade();
+    }//GEN-LAST:event_txtHoclucKeyReleased
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        list.sort(Comparator.comparing(Student::getName));
+        FillTableData(getAll());
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        list.sort(Comparator.comparing(Student::getGrade));
+        FillTableData(getAll());
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(QuanLySinhVien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(QuanLySinhVien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(QuanLySinhVien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(QuanLySinhVien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new QuanLySinhVien().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCapnhat;
+    private javax.swing.JButton btnDong;
+    private javax.swing.JButton btnSua;
+    private javax.swing.JButton btnThem;
+    private javax.swing.JButton btnXoa;
+    private javax.swing.JComboBox<String> cboNganh;
+    private javax.swing.JCheckBox chkThuong;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tblTable;
+    private javax.swing.JTextField txtDiem;
+    private javax.swing.JTextField txtHocluc;
+    private javax.swing.JTextField txtHovaten;
+    // End of variables declaration//GEN-END:variables
+}

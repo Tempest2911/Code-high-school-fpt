@@ -1,0 +1,176 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 80%;
+    height: 200px;
+    background-color: rgb(238, 235, 208);
+    text-align: center;
+    border: 1px solid black;
+    margin-left: 250px;
+}
+
+
+
+header>div>.logo {
+    height: 150px;
+    float: left;
+    margin-left: 30px;
+
+}
+
+.tim {
+    margin-top: 100px;
+    margin-left: 400px;
+}
+
+header>h1 {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 60px;
+
+}
+
+nav {
+    width: 80%;
+    margin-left: 250px;
+    height: 100px;
+    text-align: center;
+    border: 1px solid black;
+
+}
+
+nav>a {
+    display: inline-flex;
+    text-align: center;
+    font-size: xx-large;
+    padding: 50px;
+    text-decoration: none;
+    margin-top: -20px;
+    color: hsl(27, 100%, 50%);
+    font-family: Arial, Helvetica, sans-serif
+}
+
+
+
+
+article>.banner {
+    margin-bottom: -4px;
+    margin-left: 250px;
+    width: 80%;
+    height: 800px;
+    text-align: center;
+    background-color: rgb(253, 255, 225);
+    border: 1px solid black;
+}
+
+.tintuc {
+    margin-left: 250px;
+    width: 80%;
+    border: 1px solid black;
+}
+
+article>div>.nigga {
+
+    text-align: left;
+    height: 500px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+}
+
+.text {
+    width: 50%;
+    font-size: 50px;
+    text-align: left;
+    float: right;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+}
+
+
+
+article>h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    margin-left: 250px;
+    font-size: 50px;
+    color: hsl(27, 100%, 50%);
+    text-align: center;
+    border: 1px solid black;
+    padding: 30px 0px 30px 0px;
+
+}
+
+.bigd {
+    border: 1px solid black;
+    width: 80%;
+    margin-left: 250px;
+    background-color: hsla(27, 100%, 50%, 0.69);
+}
+
+article>div>h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    font-size: 100px;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    margin-left: 200px;
+    padding: 100px;
+
+}
+
+
+
+.smallbox {
+    font-size: 40px;
+    text-align: center;
+    background-color: rgb(238, 235, 208);
+    margin: 1px;
+    width: 400px;
+    height: 450px;
+    display: inline-block;
+    margin-left: 1px;
+    border: 1px solid black;
+    margin: 50px;
+    margin-left: 200px;
+}
+
+.smallbox>.main {
+    color: hsl(27, 100%, 50%);
+    text-align: center;
+    padding-top: 30px;
+    font-size: 30px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.image {
+    margin-bottom: 30px;
+}
+
+.fake {
+    font-size: 20px;
+    text-align: left;
+    margin-left: 30px;
+}
+
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    height: 150px;
+    margin-left: 250px;
+    background-color: rgb(238, 235, 208);
+    clear: both;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 50px;
+    padding-top: 100px;
+    border: 1px solid black;
+    color: hsl(27, 100%, 50%);
+}

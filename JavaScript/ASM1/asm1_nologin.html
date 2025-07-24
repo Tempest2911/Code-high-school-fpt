@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASM1</title>
+    <link rel="stylesheet" href="asm1_nologin.css">
+    <script src="https://kit.fontawesome.com/3dea816c59.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: rgb(35, 37, 39);">
+    <header>
+        
+        <img src="image/bhanner.png" alt="" id="sliderImg">
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="asm1_nologin.html">HOME</a></li>
+            <li><a href="#">CREATE</a>
+                <ul class="drop">
+                    <li><a style="padding-right: 160px;" href="#">THUG HUNTER</a></li>
+                    <li><a style="padding-right: 270px;" href="#">GAME</a></li>
+                </ul>
+            </li>
+            <li><a href="#">ROBUX</a></li>
+            <li><a href="asm1.html">LOG OUT</a></li>
+        </ul>
+    </nav>
+
+    <aside>
+        <div id="info">
+            <h1>-Khách Hàng: <span>Admin</span></h1>
+            <h1>-Thông tin đơn mua:</h1>
+            <div id="nana">
+
+            </div>
+            <button type="button" id="mua" onclick="purchase()">Purchase</button>
+            
+        </div>
+    </aside>
+
+    <article>
+        <div class="item1">
+            <img style="height: 300px;" src="image/bloxy.png" alt="">
+            <p id="sp1" class="sp">Bloxy Cola</p>
+            <p id="gia1" class="price">$15</p>
+            <i onclick="cart(event)" class="fa-sharp fa-solid fa-cart-shopping" ></i>
+        </div>
+
+        <div class="item1">
+            <img style="height: 300px;" src="image/cheeseburger.png" alt="">
+            <P id="sp2" class="sp">Cheezburger</P>
+            <p id="gia2" class="price">$10</p>
+            <i onclick="cart(event)" class="fa-sharp fa-solid fa-cart-shopping"></i>
+        </div>
+        <div class="item1">
+            <img style="height: 300px;" src="image/chicken.png" alt="">
+            <p id="sp3" class="sp">Turkey Leg</p>
+            <p id="gia3" class="price">$100</p>
+            <i onclick="cart(event)" class="fa-sharp fa-solid fa-cart-shopping"></i>
+        </div>
+        <div class="item1">
+            <img style="height: 300px;" src="image/chocolate milk.png" alt="">
+            <p id="sp4" class="sp">Chocolate Mlik</p>
+            <p id="gia4" class="price">$50</p>
+            <i onclick="cart(event)" class="fa-sharp fa-solid fa-cart-shopping"></i>
+        </div>
+        <div class="item1">
+            <img style="height: 300px;" src="image/dominus.png" alt="">
+            <p id="sp5" class="sp">Dominus Empyreus</p>
+            <p id="gia5" class="price">$100000</p>
+            <i onclick="cart(event)" class="fa-sharp fa-solid fa-cart-shopping"></i>
+        </div>
+        <div class="item1">
+            <img style="height: 300px;" src="image/image-removebg-preview (1).png" alt="">
+            <p id="sp6" class="sp">Taco</p>
+            <p id="gia6" class="price">$100</p>
+            <i onclick="cart(event)" class="fa-sharp fa-solid fa-cart-shopping"></i>
+        </div>
+        <div class="item1">
+            <img style="height: 300px;" src="image/space sandwick.png" alt="">
+            <p id="sp7" class="sp">Space Sandwick</p>
+            <p id="gia7" class="price">$40</p>
+            <i onclick="cart(event)" class="fa-sharp fa-solid fa-cart-shopping"></i>
+        </div>
+        <div class="item1">
+            <img style="height: 300px;" src="image/taddy bear.png" alt="">
+            <p id="sp8" class="sp">Taddy Bear</p>
+            <p id="gia8" class="price">$100</p>
+            <i onclick="cart(event)" class="fa-sharp fa-solid fa-cart-shopping"></i>
+        </div>
+    </article>
+
+    <footer>
+
+        <div class="text">
+            <p>©2024 Roblox Corporation. Roblox, the Roblox logo and Powering Imagination are among our registered and
+                unregistered trademarks in the U.S. and other countries.</p>
+        </div>
+    </footer>
+
+    <script src="asm1_nologin.js"></script>
+</body>
+
+</html>

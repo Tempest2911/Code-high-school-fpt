@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    height: 1200px;
+}
+
+.btn{
+    text-align: center;
+    height: 200px;
+    display: inline-block;
+    width: 100%;
+}
+.textBtn2{
+    position: absolute;
+    display: inline;
+}
+
+button{
+    text-align: center;
+    height: 100px;
+    width: 200px;
+    font-size: 2em;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traning</title>
+</head>
+<style>
+    body{
+        height: 2000px;
+    }
+    #slide{
+        height: 500px;
+    }
+    #imagee{
+        text-align: center;
+        padding-bottom: 100px;
+    }
+    .error{
+        color: red;
+    }
+    #price{
+        color: blue;
+    }
+</style>
+<body style="background-color: hsl(0, 0%, 30%);">
+    <div id="imagee">
+        <div >
+            <img src="img/capy.gif" id="slide"  alt="">
+        </div>
+        <div><button type="button" onclick="Pre()">Previous</button>
+            <button type="button" id="play">Play</button>
+            <button type="button" id="stop">Stop</button>
+            <button type="button" onclick="Next()">Next</button>
+        </div>
+    </div>
+   
+
+    <!-- <div id="formm">
+        <form action="">
+            <div>
+                <label for="">Tên chủ hộ:</label>
+                <input type="text" name="" id="name" onchange="checkname()" onblur="checkname()">
+                <span id="errname" class="error"></span>
+            </div>
+            <div>
+                <label for="">Địa chỉ:</label>
+                <input type="text" name="" id="address" onchange="checkaddress()" onblur="checkaddress()">
+                <span id="erraddress" class="error"></span>
+            </div>
+            <div>
+                <label for="">Hộ gia đình:</label>
+                <input type="radio" name="gd" id="radio1" value="Hộ Kinh Doanh" onchange="validategd()" onblur="validategd()">
+                <label for="">Hộ Kinh Doanh</label>
+                <input type="radio" name="gd" id="no" value="Nhà ở" onchange="validategd()" onblur="validategd()">
+                <label for="">Nhà ở</label>
+                <span id="errradio" class="error"></span>
+
+            </div>
+            <div>
+                <label for="">Số điện:</label>
+                <input type="text" name="phone" id="phone" onchange="checktel()" onblur="checktel()">
+                <span id="errtel" class="error"></span>
+            </div>
+            <div>
+                <button type="button" onclick="tinh()">Tính Toán</button>
+                <span id="ketqua"></span>
+            </div>
+        </form>
+    </div> -->
+
+
+    <!-- <div id="form">
+        <form action="">
+            <div>
+                <label for="">Họ và tên:</label>
+                <input type="text" name="" id="name" onchange="checkname()" onblur="checkname()">
+                <span id="errname" class="error"></span>
+            </div>
+
+            <div>
+                <label for="">Số điện thoại:</label>
+                <input type="tel" name="" id="phone" onchange="checktel()" onblur="checktel()">
+                <span id="errtel" class="error"></span>
+            </div>
+
+            <div>
+                <label for="">Thứ hạng:</label>
+                <select name="" id="rank" onchange="checkrank()">
+                    <option value="Top 100">Top 100</option>
+                    <option value="Top 200">Top 200</option>
+                    <option value="Unranked">Unranked</option>
+                </select>
+                <span id="errrank" class="error"></span>
+            </div>
+
+            <div>
+                <button type="button" onclick="Check()">Kiểm Tra</button>
+                <span id="ketqua"></span>
+            </div>
+        </form>
+    </div> -->
+
+
+    <!-- <form action="">
+        <div>
+            <label for="">Name:</label>
+            <input type="text" name="" id="name" >
+            <span id="errname" class="error"></span>
+        </div>
+
+        <div>
+            <label for="">Address:</label>
+            <input type="text" name="" id="address" >
+            <span id="erraddress" class="error"></span>
+        </div>
+
+        <div>
+            <label for="">Email:</label>
+            <input type="text" name="" id="email" >
+            <span id="erremail" class="error"></span>
+        </div>
+
+        <div>
+            <label for="">Choose:</label>
+            <select name="" id="car" onchange="showprice()">
+                <option value="Xe máy">Xe máy</option>
+                <option value="Ô tô 4 chỗ">Ô tô 4 chỗ</option>
+                <option value="Ô tô 7 chỗ">Ô tô 7 chỗ</option>
+            </select>
+            <span id="price">100000/ngày</span>
+        </div>
+
+        <div>
+            <label for="">Time:</label>
+            <select name="" id="time" >
+                <option value="1">1 ngày</option>
+                <option value="3">3 ngày</option>
+                <option value="7">7 ngày</option>
+            </select>
+            <span id="price"></span>
+        </div>
+
+        <div>
+            <button type="button" onclick="check(event)">Thuê xe</button>
+            <h1 id="total"></h1>
+        </div>
+    </form>-->
+
+    <form action="">
+        <div>
+            <label for="">Tên ngành:</label>
+            <input type="text" name="" id="name">
+            <span id="errname" class="error"></span>
+        </div>
+
+        <div>
+            <label for="">Lớp:</label>
+            <select name="" id="lophoc" onchange="upgradesiso()">
+                <option value="">Chọn Lớp</option>
+                <option value="SD1801">SD1801</option>
+                <option value="SD1802">SD1802</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">Sĩ số:</label>
+            <input type="text" name="" value="" id="siso" disabled >
+
+        </div>
+
+        <div>
+            <label for="">Số người đăng kí:</label>
+            <input type="text" name="" id="quantity">
+            <span id="errquantity" class="error"></span>
+        </div>
+
+        <div>
+            <label for="">Trạng thái:</label>
+            <input type="text" name="" id="trangthai">
+            <span id="errtrangthai" class="error"></span>
+        </div>
+
+        <div>
+            <label for="">Hình thức phạt:</label>
+            <input type="radio" name="phatt" class="htphat" value="1" id="phat1" onchange="checkphat()" onblur="checkphat()" onclick="upgradephat()">
+            <label for="">1</label>
+            <input type="radio" name="phatt" class="htphat" value="2" id="phat2" onchange="checkphat()" onblur="checkphat()" onclick="upgradephat()">
+            <label for="">2</label>
+            <span id="errphat" class="error"></span>
+        </div>
+
+        <div>
+            <label for="">Hành động:</label>
+            <input type="text" name="" id="action" disabled>
+        </div>
+
+        <div>
+            <button type="button" onclick="phat(event)">Phạt</button>
+        </div>
+    
+    
+
+    <script src="LastTraining.js"></script>
+</body>
+</html> 

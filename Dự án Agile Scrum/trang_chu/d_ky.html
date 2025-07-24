@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+
+    <link rel="stylesheet" href="d_nhap.css">
+    <link rel="icon" href="Logo.png">
+    <script src="https://kit.fontawesome.com/3dea816c59.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="Phong_phan1">
+        <article class="container">
+            <header class="navbar">
+                <div>
+                    <a href="Home.html"><img loading="lazy" class="logo" src="Logo.png" alt="Logo"></a>
+                </div>
+
+                <label for="nav-mobile-input" class="nav_bars_btn">
+                    <i id="bars" class="fa-solid fa-bars"></i>
+                </label>
+
+                <nav class="nav_pc">
+                    <ul class="nav-links" id="navLinks">
+                        <li class="textNav"><a href="Home.html">Trang Chủ</a></li>
+                        <li>
+                            <div class="textNav" id="lalala"><a href="#" id="sanPham">Sản Phẩm</a>
+                            </div>
+                            <ul class="dropdown" id="dropdown">
+                                <li><a href="TeddyBear.html">Teddy Bear</a></li>
+                                <li><a href="Cabypara.html">Capybara</a></li>
+                                <li><a href="Labubu.html">Labubu</a></li>
+                            </ul>
+                        </li>
+                        <div class="camNang">
+                            <li class="textNav" id="camNang"><a href="Cam_Nang.html" id="lh">Cẩm Nang</a></li>
+                        </div>
+                        <a href="d_nhap.html" style="color: black;">
+                            <i id="userLogo" class="fa-solid fa-user-large"></i>
+                        </a>
+                    </ul>
+                </nav>
+
+                <input type="checkbox" hidden name="" class="nav_input" id="nav-mobile-input">
+
+                <label for="nav-mobile-input" class="nav_overlay"></label>
+
+                <nav class="nav_mobile">
+                    <label for="nav-mobile-input" class="nav_mobile-close">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </label>
+                    <ul class="nav_mobile-list">
+                        <li>
+                            <a href="Home.html" class="nav_mobile-link">Trang Chủ</a>
+                        </li>
+                        <li>
+                            <div><a href="#" class="nav_mobile-link" onclick="toggleMenu()">Sản Phẩm</a></div>
+                            <ul id="dropdown-mobile" class="dropdown-mobile" style="list-style-type: none">
+                                <li><a href="TeddyBear.html">Teddy Bear</a></li>
+                                <li><a href="Cabypara.html">Capybara</a></li>
+                                <li><a href="Labubu.html">Labubu</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Cam_Nang.html" class="nav_mobile-link">Cẩm Nang</a></li>
+                        <a href="d_nhap.html" style="color: black;">
+                            <i id="userLogo" class="fa-solid fa-user-large"></i>
+                        </a>
+                    </ul>
+                </nav>
+            </header>
+        </article>
+    </section>
+    <section class="phan2">
+        <article>
+            <div class="banner">
+                <img loading="lazy" src="aaaaaaaaaa.PNG" alt="banner_1">
+            </div>
+        </article>
+    </section>
+    <section class="phan3">
+        <article>
+            <h2>ĐĂNG KÝ</h2>
+            <div class="login-container">
+                <form onsubmit="handleLogin(event)">
+                    <div class="input-group">
+                        <label for="name">Họ Và Tên</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Mật Khẩu</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Email</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Số Điện Thoại</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Địa Chỉ</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <button style="font-weight: bold;" type="submit" class="login-btn">ĐĂNG KÝ</button>
+                </form>
+                <div class="register-link">
+                    Bạn đã có tài khoản? <a href="d_nhap.html">Đăng Nhập</a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            alert("Đăng ký thành công");
+            window.location.href = "Home.html"; // Thay / để chuyển vào trang chủ
+        }
+    </script>
+
+</body>
+
+</html>

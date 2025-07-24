@@ -1,0 +1,81 @@
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .navMobile {
+        display: block;
+    }
+
+    .navMobile a {
+        text-decoration: none;
+        color: brown;
+    }
+
+    .title {
+        font-size: 60px;
+        top: 200px;
+    }
+
+    .navBar {
+        display: block;
+    }
+
+    .sticks {
+        width: 700px;
+    }
+
+    main {
+        margin-left: 30px;
+    }
+
+    #contactMe {
+        font-size: 40px;
+    }
+
+    .textt {
+        width: 450px;
+    }
+
+    #messagee {
+        width: 450px;
+    }
+
+    #send {
+        margin-left: 555px;
+    }
+
+    .OrderTable {
+        margin-left: -80px;
+        font-size: 40px;
+    }
+
+    .nana {
+        font-size: 32px;
+    }
+
+    .textt {
+        margin-left: 230px;
+    }
+
+    .box {
+        margin-left: 230px;
+    }
+
+    #DeliverTo{
+        width: 450px;
+    }
+
+    #order {
+        margin-left: 550px;
+    }
+
+    #about img{
+        width: 98%;
+    }
+
+    #about{
+        margin-left: 10px;
+    }
+    
+}

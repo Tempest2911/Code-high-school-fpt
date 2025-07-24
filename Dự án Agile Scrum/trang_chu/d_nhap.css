@@ -1,0 +1,682 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  background-color: #fff;
+  height: 1000px;
+}
+
+.Phong_phan1 {
+  background: linear-gradient(to right, #fdf2f4, #fcd1d8);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* HEADER */
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  width: 20%;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* Định dạng menu chính */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  /* Bo góc cho toàn bộ menu */
+  font-size: 150%;
+  font-weight: bold;
+}
+
+/* Định dạng cho các mục trong menu chính */
+.nav-links>li {
+  position: relative;
+}
+
+.nav-links>li>a,
+#sanPham {
+  color: #000000;
+  /* Màu chữ đen */
+  padding: 10px 10px;
+  border-radius: 4px;
+  /* Bo góc cho từng mục */
+  transition: color 0.3s ease;
+  /* Hiệu ứng chuyển đổi */
+}
+
+.nav-links>li>a:hover {
+
+  color: hwb(0 70% 0%);
+  /* Màu nền khi hover */
+}
+
+#sanPham:hover {
+  color: hwb(0 70% 0%);
+}
+
+#lh {
+  color: black;
+}
+
+#lh:hover {
+  transition: color 0.3s ease;
+  color: hwb(0 70% 0%);
+}
+
+#userLogo:hover {
+
+  color: hwb(0 70% 0%);
+  transition: color 0.3s ease;
+}
+
+#sanPham {
+  padding-bottom: 40px;
+}
+
+/* Định dạng menu thả xuống */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffcece;
+  /* Màu nền trắng */
+  border: 1px solid #ddd;
+  /* Viền cho menu thả xuống */
+  /* Bo góc cho menu thả xuống */
+  padding: 0;
+  margin: 0;
+  /* Đảm bảo menu thả xuống nằm trên các thành phần khác */
+  min-width: 13vw;
+  /* Đảm bảo độ rộng tối thiểu cho menu */
+  margin-top: 37px;
+  text-align: center;
+
+}
+
+/* Hiển thị menu thả xuống khi hover */
+.nav-links>li:hover .dropdown {
+  display: block;
+
+}
+
+/* Định dạng mục trong menu thả xuống */
+.dropdown li {
+  list-style: none;
+  z-index: 10;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px;
+  color: #000;
+  /* Màu chữ đen */
+  text-decoration: none;
+  border-bottom: 3px solid #ffffff;
+  /* Viền dưới cho từng mục */
+  transition: background-color 0.3s ease;
+  /* Hiệu ứng chuyển đổi */
+
+
+}
+
+/* Định dạng cho mục cuối cùng không có viền dưới */
+.dropdown li:last-child a {
+  border-bottom: none;
+}
+
+/* Màu nền khi hover menu thả xuống */
+.dropdown a:hover {
+  background-color: hwb(0 70% 0%);
+  color: white;
+  /* Màu nền khi hover */
+}
+
+/* Định dạng chung cho các liên kết */
+a {
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+#userLogo {
+  margin-left: 10px;
+}
+
+
+/* MOBILE NAV */
+
+.nav_bars_btn {
+  display: none;
+  font-size: 30px;
+}
+
+#bars {
+  width: 100%;
+  height: 100%;
+}
+
+.nav_overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  animation: fadeIn linear 0.2s;
+
+}
+
+.nav_mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 450px;
+  max-width: 100%;
+  background-color: rgb(255, 206, 206);
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform linear 0.2s, opacity linear 0.2s;
+}
+
+.nav_mobile-list {
+  margin-top: 50px;
+  list-style-type: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.nav_mobile-list>li {
+  border-bottom: 3px white solid;
+}
+
+.nav_mobile-list>li:last-child {
+  border-bottom: 0px;
+}
+
+.nav_mobile-link {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 8px 0;
+  font-size: 1.8rem;
+}
+
+.nav_mobile-link:hover {
+  transition: color 0.3s ease;
+  color: rgb(238, 121, 121);
+}
+
+.nav_mobile-close {
+  font-size: 30px;
+  color: black;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  bottom: 0;
+}
+
+.nav_input:checked~.nav_overlay {
+  display: block;
+}
+
+
+.nav_input:not(:checked)~.Phong_phan3 {
+  z-index: 10;
+}
+
+
+.nav_input:checked~.nav_mobile {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.dropdown-mobile {
+  display: none;
+}
+
+.dropdown-mobile>li {
+  border-bottom: 3px white solid;
+  text-align: center;
+  padding: 8px 0;
+  background-color: rgb(238, 121, 121);
+}
+
+.dropdown-mobile>li:last-child {
+  border-bottom: 0;
+}
+
+.dropdown-mobile>li:active {
+  background-color: hsl(0, 77%, 80%);
+}
+
+.dropdown-mobile>li>a {
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* PHẦN 2 */
+/* Phần 2 */
+.banner {
+  width: 100%;
+  height: 80%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: none;
+}
+
+.banner img {
+  width: 100%;
+}
+
+/* Phần 3 */
+
+.phan3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+}
+
+.login-container {
+  border: 1px solid #8B0000;
+  max-width: 100rem;
+  padding: 5rem;
+  background-color: #fff;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-bottom: 100px;
+}
+
+article h2 {
+  margin-top: 1.5rem;
+  font-size: 5rem;
+  color: #8B0000;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-group label {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.input-group input {
+  width: 100vh;
+  padding: 0.8rem;
+  border: 0.1rem solid #f4cccc;
+  border-radius: 0.5rem;
+  background-color: #fceaea;
+  font-size: 1rem;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #f28b82;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #f28b82;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #e57373;
+}
+
+.register-link {
+  margin-top: 1rem;
+  font-size: 1.0rem;
+  color: #333;
+
+}
+
+.register-link a {
+  color: #d32f2f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1095px) {
+  .nav_bars_btn {
+    display: block;
+  }
+
+  .nav_pc {
+    display: none;
+  }
+
+
+  #userLogo {
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* PHẦN 3 */
+@media screen and (max-width: 780px) {
+  .phan3 {
+    padding: 20px;
+  }
+
+  .login-container {
+    max-width: 70vh;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .phan3 {
+    padding: 20px;
+  }
+
+  .login-container {
+    max-width: 90vh;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-group {
+    margin-bottom: 20px;
+  }
+
+  .input-group input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+
+  .input-group input:focus {
+    border-color: #770004;
+    outline: none;
+  }
+
+  .login-btn {
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    background-color: #f28b82;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .login-btn:hover {
+    background-color: #e57373;
+  }
+
+  .register-link {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .register-link a {
+    color: #770004;
+    text-decoration: none;
+  }
+
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Small Tablet - 480 x 640 */
+@media screen and (max-width: 480px) {
+  .phan3 {
+    padding: 10px;
+  }
+
+  article h2 {
+    font-size: 4rem;
+  }
+
+  .login-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-group input {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+
+  .input-group input:focus {
+    border-color: #770004;
+    outline: none;
+  }
+
+  .login-btn {
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #f28b82;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .login-btn:hover {
+    background-color: #ef787c;
+
+  }
+
+  .register-link {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .register-link a {
+    color: #770004;
+    text-decoration: none;
+  }
+
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+}
+
+/* iPhone (Portrait) - 320 x 480 */
+@media screen and (max-width: 320px) {
+  .phan3 h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .login-container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-group input {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+
+  .input-group input:focus {
+    border-color: #770004;
+    outline: none;
+  }
+
+  .login-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+    background-color: #f28b82;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .login-btn:hover {
+    background-color: #ef787c;
+  }
+
+  .register-link {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .register-link a {
+    color: #770004;
+    text-decoration: none;
+  }
+
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Small Smartphone - 240px width */
+@media screen and (max-width: 240px) {
+  .phan3 h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .login-container {
+    width: 100%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-group input {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+
+  .input-group input:focus {
+    border-color: #770004;
+    outline: none;
+  }
+
+  .login-btn {
+    font-size: 0.8rem;
+    padding: 8px;
+    background-color: #f28b82;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .login-btn:hover {
+    background-color: #ef787c;
+  }
+
+  .register-link {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .register-link a {
+    color: #770004;
+    text-decoration: none;
+  }
+
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+}

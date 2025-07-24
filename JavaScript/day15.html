@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+
+        
+        <div id="form">
+            <label for="">Gender:</label>
+            <input type="radio" name="gender" id="gender" value="Male" onchange="validateGender()">
+            <label for="">Male</label>
+            <input type="radio" name="gender" id="gender" value="Female" onchange="validateGender()">
+            <label for="">Female</label><br>
+            <span id="errorGender" style="color: red;" class="error"></span>
+        </div>
+
+        <div id="form">
+            <label for="">Chuyên Ngành: </label>
+            <input type="checkbox" name="major" id="GD" value="Graphic Design" onchange="validateMajor()">
+            <label for="">Graphic Design</label>
+            <input type="checkbox" name="major" id="it" value="IT" onchange="validateMajor()">
+            <label for="">IT</label>
+            <input type="checkbox" name="major" id="mk" value="Marketing" onchange="validateMajor()">
+            <label for="">Marketing</label><br>
+            <span id="errormajor"></span>
+        </div>
+
+        <button type="button" onclick="displayInfo()">Hiển thị</button>
+    </form>
+
+    <script src="day15.js"></script>
+</body>
+</html>

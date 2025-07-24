@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+.error{
+    color: red;
+}
+</style>
+
+<body>
+    <h1>THUÊ XE TỰ LÁIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII AHHHHHHHHHHHHHHH</h1>
+    <form action="">
+        <div>
+            <label for="">Họ tên: </label>
+            <input type="text" name="name" id="name">
+            <span id="errorname" class="error"></span>
+        </div>
+
+        <div>
+            <label for="">Địa chỉ: </label>
+            <input type="text" name="address" id="address">
+            <span id="erroraddress" class="error"></span>
+        </div>
+
+        <div>
+            <label for="">Email: </label>
+            <input type="text" name="email" id="email">
+            <span id="erroremail" class="error"></span>
+        </div>
+
+        <div> 
+            <label for="">Chọn thuê xe:</label>
+            <select name="car" id="car">
+                <option  value="100000">Xe Máy 100000$/ngày</option>
+                <option value="500000">Ô tô four chỗ 500000$ngày</option>
+                <option value="700000">Ô tô seven chỗ 700000$/ngày</option>
+            </select>
+            <span id="errorcar" class="error"></span>
+        </div>
+
+        <div>
+            <label for="">Chọn thời gian thuê:</label>
+            <select name="time" id="time">
+                <option value="1 ngày">1 ngày</option>
+                <option value="3 ngày">3 ngày</option>
+                <option value="7 ngày">7 ngày</option>
+            </select>
+            <span id="errortime" class="error"></span>
+        </div>
+
+        <button type="button" onclick="thue(event)">Thuê xe</button>
+
+
+        <h2>Tổng số tiền: <span id="price"></span></h2>
+    </form>
+    <script src="ThueXe.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 3000px;
+}
+header{
+    background-color: antiquewhite;
+width: 100%;
+}
+
+.header1{
+    display: inline-flex;
+}
+
+h1{
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.header2{
+    display: inline-flex;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+input{
+    height: 40px;
+
+
+}

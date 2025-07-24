@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+.Phong_phan1 {
+    background: linear-gradient(to right, #fdf2f4, #fcd1d8);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* HEADER */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    width: 20%;
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+/* Định dạng menu chính */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    /* Bo góc cho toàn bộ menu */
+    font-size: 150%;
+    font-weight: bold;
+}
+
+/* Định dạng cho các mục trong menu chính */
+.nav-links>li {
+    position: relative;
+}
+
+.nav-links>li>a,
+#sanPham {
+    color: #000000;
+    /* Màu chữ đen */
+    padding: 10px 10px;
+    border-radius: 4px;
+    /* Bo góc cho từng mục */
+    transition: color 0.3s ease;
+    /* Hiệu ứng chuyển đổi */
+}
+
+.nav-links>li>a:hover {
+
+    color: hwb(0 70% 0%);
+    /* Màu nền khi hover */
+}
+
+#sanPham:hover {
+    color: hwb(0 70% 0%);
+}
+
+#lh {
+    color: black;
+}
+
+#lh:hover {
+    transition: color 0.3s ease;
+    color: hwb(0 70% 0%);
+}
+
+#userLogo:hover {
+
+    color: hwb(0 70% 0%);
+    transition: color 0.3s ease;
+}
+
+#sanPham {
+    padding-bottom: 40px;
+}
+
+/* Định dạng menu thả xuống */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffcece;
+    /* Màu nền trắng */
+    border: 1px solid #ddd;
+    /* Viền cho menu thả xuống */
+    /* Bo góc cho menu thả xuống */
+    padding: 0;
+    margin: 0;
+    /* Đảm bảo menu thả xuống nằm trên các thành phần khác */
+    min-width: 13vw;
+    /* Đảm bảo độ rộng tối thiểu cho menu */
+    margin-top: 37px;
+    text-align: center;
+
+}
+
+/* Hiển thị menu thả xuống khi hover */
+.nav-links>li:hover .dropdown {
+    display: block;
+
+}
+
+/* Định dạng mục trong menu thả xuống */
+.dropdown li {
+    list-style: none;
+    z-index: 10;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: #000;
+    /* Màu chữ đen */
+    text-decoration: none;
+    border-bottom: 3px solid #ffffff;
+    /* Viền dưới cho từng mục */
+    transition: background-color 0.3s ease;
+    /* Hiệu ứng chuyển đổi */
+
+
+}
+
+/* Định dạng cho mục cuối cùng không có viền dưới */
+.dropdown li:last-child a {
+    border-bottom: none;
+}
+
+/* Màu nền khi hover menu thả xuống */
+.dropdown a:hover {
+    background-color: hwb(0 70% 0%);
+    color: white;
+    /* Màu nền khi hover */
+}
+
+/* Định dạng chung cho các liên kết */
+a {
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#userLogo {
+    margin-left: 10px;
+}
+
+
+/* MOBILE NAV */
+
+.nav_bars_btn {
+    display: none;
+    font-size: 30px;
+}
+
+#bars {
+    width: 100%;
+    height: 100%;
+}
+
+.nav_overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: fadeIn linear 0.2s;
+
+}
+
+.nav_mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 450px;
+    max-width: 100%;
+    background-color: rgb(255, 206, 206);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform linear 0.2s, opacity linear 0.2s;
+}
+
+.nav_mobile-list {
+    margin-top: 50px;
+    list-style-type: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.nav_mobile-list>li {
+    border-bottom: 3px white solid;
+}
+
+.nav_mobile-list>li:last-child {
+    border-bottom: 0px;
+}
+
+.nav_mobile-link {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 8px 0;
+    font-size: 1.8rem;
+}
+
+.nav_mobile-link:hover {
+    transition: color 0.3s ease;
+    color: rgb(238, 121, 121);
+}
+
+.nav_mobile-close {
+    font-size: 30px;
+    color: black;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    bottom: 0;
+}
+
+.nav_input:checked~.nav_overlay {
+    display: block;
+}
+
+
+.nav_input:not(:checked)~.Phong_phan3 {
+    z-index: 10;
+}
+
+
+.nav_input:checked~.nav_mobile {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.dropdown-mobile {
+    display: none;
+}
+
+.dropdown-mobile>li {
+    border-bottom: 3px white solid;
+    text-align: center;
+    padding: 8px 0;
+    background-color: rgb(238, 121, 121);
+}
+
+.dropdown-mobile>li:last-child {
+    border-bottom: 0;
+}
+
+.dropdown-mobile>li:active {
+    background-color: hsl(0, 77%, 80%);
+}
+
+.dropdown-mobile>li>a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1095px) {
+    .nav_bars_btn {
+        display: block;
+    }
+
+    .nav_pc {
+        display: none;
+    }
+
+
+    #userLogo {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Trang cach giat */
+.CachGiat {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.container2 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.container2 h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container2 h2 {
+
+    font-size: 30px;
+    color: #d33;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container2 h3 {
+
+    font-size: 50px;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container2 p {
+    text-align: justify;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.Note p {
+    text-align: center;
+    color: gray;
+}
+
+
+
+/* Footer */
+.footer {
+    padding: 0%;
+    margin: 0%;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 550px;
+    background-color: rgb(255, 232, 232);
+    top: 30px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    border-top: 1px solid #ccc;
+
+}
+
+.thongtin>i>h2 {
+margin-top: 3vw;
+    font-size: 2.0em;
+    color: rgb(164, 22, 69);
+
+}
+
+
+.lienhe>i>h2 {
+    margin-top: 3vw;
+    font-size: 2.0em;
+    color: rgb(164, 22, 69);
+}
+
+.footer>img {
+
+    margin-top: 1%;
+
+}
+
+.footer h2 {
+
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin-left: 0.5%;
+    font-size: 0.9em;
+    line-height: 1.9;
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .footer img {
+        width: 50%;
+        height: auto;
+    }
+
+    .thongtin>i>h2,
+    .lienhe>i>h2 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .thongtin,
+    .lienhe {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer h2 {
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+
+    .footer p {
+        font-size: 0.8em;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px;
+    }
+
+    .footer img {
+        width: 70%;
+        margin-top: 10px;
+    }
+
+    .thongtin>i>h2,
+    .lienhe>i>h2 {
+        font-size: 1.2em;
+    }
+
+    .footer h2,
+    .footer p {
+        font-size: 0.9em;
+    }
+}

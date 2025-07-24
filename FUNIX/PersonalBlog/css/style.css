@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "Dancing";
+    src: url(static/DancingScript-Regular.ttf);
+    font-weight: 400;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Dancing";
+    font-weight: 400;
+    font-size: 30px;
+    color: brown;
+
+}
+
+.title {
+    font-size: 100px;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(102, 102, 3, 0.304);
+    text-align: center;
+    top: 600px;
+    color: rgb(255, 255, 255);
+}
+
+li {
+    display: inline;
+    margin-right: 5px;
+}
+
+#about {
+    margin-left: 50px;
+}
+
+.nav {
+    margin-left: 20px;
+
+}
+
+.nav a {
+    text-decoration: none;
+    color: brown;
+}
+
+.nav a:hover {
+    color: hwb(0 16% 55%);
+}
+
+.nav a.active {
+    color: hwb(0 16% 75%);
+}
+
+.navBar {
+    float: right;
+    margin-right: 20px;
+    display: none;
+}
+
+.navBar:hover {
+    color: hwb(0 16% 55%);
+}
+
+.navBar:active {
+    color: hwb(0 16% 75%);
+}
+
+.navOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.navMobile {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    max-width: 100%;
+    background-color: white;
+    display: none;
+    transform: translateX(100%);
+    transition: transform linear 0.2s;
+}
+
+.navMobileList {
+    position: fixed;
+    margin-top: 40px;
+}
+
+.navMobile li a {
+    display: block;
+    font-size: 27px;
+    margin-left: 60px;
+    margin-top: -10px;
+}
+
+.navCloseBtn {
+    float: right;
+    margin-right: 20px;
+}
+
+.navInput:checked~.navOverlay {
+    display: block;
+}
+
+.navInput:checked~.navMobile {
+    transform: translateX(0%);
+}
+
+.Cakes {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 30px;
+}

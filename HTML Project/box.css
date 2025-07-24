@@ -1,0 +1,143 @@
+.container {
+    width: 100%;
+    height: 1600px;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 1000px;
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+    font-size: 100px;
+}
+
+header img {
+    width: 100%;
+    height: 1000px;
+
+
+}
+
+nav {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    background-color: #ff7300;
+    font-size: 70px;
+    text-align: center;
+    padding-top: 40px;
+
+}
+
+ul{
+    list-style: none;
+    background: #ff7300;
+}
+
+ul li{
+    display: inline-block;
+    position: relative;
+}
+
+ul li a{
+    display: block;
+    text-decoration: none;
+    text-align: left;
+    color: #FFF;
+
+    margin-right: 40px;
+}
+
+ul li ul.dropdown li{
+    display: block;
+}
+
+ul li ul.dropdown{
+    width: 140%;
+    position: absolute;
+    display: none;
+}
+
+ul li:hover ul.dropdown{
+    display: block;
+}
+
+ul li a:link{
+    color: white;
+    background-color: transparent;
+  text-decoration: none;
+}
+
+ul li a:visited{
+    color: white;
+    background-color: transparent;
+  text-decoration: none;
+}
+
+ul li a{
+    
+    padding-bottom: 30px;
+}
+
+ul li a:hover{
+    color: #0015ff;
+}
+
+
+article {
+    width: 80%;
+    height: 80%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    float: left;
+    font-size: 100px;
+}
+
+aside {
+    width: 20%;
+    height: 80%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(137, 137, 137);
+    float: right;
+    font-size: 50px;
+
+}
+
+aside>ul {
+    margin-left: 60px;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(119, 226, 255);
+    clear: both;
+    font-size: 50px;
+    text-align: center;
+    padding: 100px;
+    border-top: 10px double orange;
+}
+
+p>img {
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: yellow;
+    box-shadow: 5px 5px 5px blue;
+}
+
+p>img:hover {
+    box-shadow: 20px 20px 20px red;
+    background-color: aqua;
+}

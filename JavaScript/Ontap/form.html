@@ -1,0 +1,64 @@
+<!-- Khi chọn Lớp: SD1801 thì hiện sĩ số 31, SD1802 hiển thị 30
+Chọn Hình thức phạt 1 hành động hiện chống đẩy, hình thức phạt 2 hành động hiện hát 1 bài
+Khi nhấn vào nút “Phạt”
+Bắt buộc nhập liệu tất cả các trường trên form, hiển thị thông báo bên cạnh các đối tượng
+Tính Trạng Thái = sĩ số - số người đăng ký -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <div id="form-group">
+            <label for="nghanh">Tên Ngành: </label>
+            <input type="text" id="nghanh">
+            <span id="errName" class="error"></span>
+        </div>
+        <div id="form-group">
+            <label for="lophoc">Lớp: </label>
+            <select name="lophoc" id="lophoc" onchange="updateSiSo()">
+                <option value="">Chọn Lớp</option>
+                <option value="SD1801">SD1801</option>
+                <option value="SD1802">SD1802</option>
+            </select>
+            <span id="errLop" class="error"></span>
+        </div>
+        <div id="form-group">
+            <label for="siso">Sĩ Số: </label>
+            <input type="number" id="siso" disabled>
+        </div>
+        <div id="form-group">
+            <label for="dangky">Số Người Đăng Ký: </label>
+            <input type="number" id="dangky">
+            <span id="errDangKy" class="error"></span>
+        </div>
+        <div id="form-group">
+            <label for="trangthai">Trạng Thái: </label>
+            <input type="number" id="trangthai" disabled>
+            <span id="errTrangThai" class="error"></span>
+        </div>
+        <div id="form-group">
+            <label>Hình Thức Phạt: </label>
+            <input type="radio" id="phat1" name="phat" value="phat1" onclick="updateHanhDong()">
+            <label for="phat1">Hình Thức 1</label>
+            <input type="radio" id="phat2" name="phat" value="phat2" onclick="updateHanhDong()">
+            <label for="phat2">Hình Thức 2</label>
+            <span id="errPhat" class="error"></span>
+        </div>
+        <div id="form-group">
+            <label for="hanhdong">Hành Động</label>
+            <input type="text" id="hanhdong" disabled>
+        </div>
+        <button type="button" onclick="validateForm()">Phạt</button>
+    </form>
+    
+
+    <script src="form.js"></script>
+</body>
+
+</html>

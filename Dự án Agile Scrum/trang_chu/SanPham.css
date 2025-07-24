@@ -1,0 +1,872 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+.Phong_phan1 {
+    background: linear-gradient(to right, #fdf2f4, #fcd1d8);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* HEADER */
+
+.container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    width: 20%;
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+/* Định dạng menu chính */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    /* Bo góc cho toàn bộ menu */
+    font-size: 150%;
+    font-weight: bold;
+}
+
+/* Định dạng cho các mục trong menu chính */
+.nav-links>li {
+    position: relative;
+}
+
+.nav-links>li>a,
+#sanPham {
+    color: #000000;
+    /* Màu chữ đen */
+    padding: 10px 10px;
+    border-radius: 4px;
+    /* Bo góc cho từng mục */
+    transition: color 0.3s ease;
+    /* Hiệu ứng chuyển đổi */
+}
+
+.nav-links>li>a:hover {
+
+    color: hwb(0 70% 0%);
+    /* Màu nền khi hover */
+}
+
+#sanPham:hover {
+    color: hwb(0 70% 0%);
+}
+
+#lh {
+    color: black;
+}
+
+#lh:hover {
+    transition: color 0.3s ease;
+    color: hwb(0 70% 0%);
+}
+
+#userLogo:hover {
+
+    color: hwb(0 70% 0%);
+    transition: color 0.3s ease;
+}
+
+#sanPham {
+    padding-bottom: 40px;
+}
+
+/* Định dạng menu thả xuống */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffcece;
+    /* Màu nền trắng */
+    border: 1px solid #ddd;
+    /* Viền cho menu thả xuống */
+    /* Bo góc cho menu thả xuống */
+    padding: 0;
+    margin: 0;
+    /* Đảm bảo menu thả xuống nằm trên các thành phần khác */
+    min-width: 13vw;
+    /* Đảm bảo độ rộng tối thiểu cho menu */
+    margin-top: 37px;
+    text-align: center;
+
+}
+
+/* Hiển thị menu thả xuống khi hover */
+.nav-links>li:hover .dropdown {
+    display: block;
+
+}
+
+/* Định dạng mục trong menu thả xuống */
+.dropdown li {
+    list-style: none;
+    z-index: 10;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: #000;
+    /* Màu chữ đen */
+    text-decoration: none;
+    border-bottom: 3px solid #ffffff;
+    /* Viền dưới cho từng mục */
+    transition: background-color 0.3s ease;
+    /* Hiệu ứng chuyển đổi */
+
+
+}
+
+/* Định dạng cho mục cuối cùng không có viền dưới */
+.dropdown li:last-child a {
+    border-bottom: none;
+}
+
+/* Màu nền khi hover menu thả xuống */
+.dropdown a:hover {
+    background-color: hwb(0 70% 0%);
+    color: white;
+    /* Màu nền khi hover */
+}
+
+/* Định dạng chung cho các liên kết */
+a {
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#userLogo {
+    margin-left: 10px;
+}
+
+/* MOBILE NAV */
+
+.nav_bars_btn {
+    display: none;
+    font-size: 30px;
+}
+
+#bars {
+    width: 100%;
+    height: 100%;
+}
+
+.nav_overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: fadeIn linear 0.2s;
+
+}
+
+.nav_mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 450px;
+    max-width: 100%;
+    background-color: rgb(255, 206, 206);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform linear 0.2s, opacity linear 0.2s;
+}
+
+.nav_mobile-list {
+    margin-top: 50px;
+    list-style-type: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.nav_mobile-list>li {
+    border-bottom: 3px white solid;
+}
+
+.nav_mobile-list>li:last-child {
+    border-bottom: 0px;
+}
+
+.nav_mobile-link {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 8px 0;
+    font-size: 1.8rem;
+}
+
+.nav_mobile-link:hover {
+    transition: color 0.3s ease;
+    color: rgb(238, 121, 121);
+}
+
+.nav_mobile-close {
+    font-size: 30px;
+    color: black;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    bottom: 0;
+}
+
+.nav_input:checked~.nav_overlay {
+    display: block;
+}
+
+
+
+
+.nav_input:checked~.nav_mobile {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.dropdown-mobile {
+    display: none;
+}
+
+.dropdown-mobile>li {
+    border-bottom: 3px white solid;
+    text-align: center;
+    padding: 8px 0;
+    background-color: rgb(238, 121, 121);
+}
+
+.dropdown-mobile>li:last-child {
+    border-bottom: 0;
+}
+
+.dropdown-mobile>li:active {
+    background-color: hsl(0, 77%, 80%);
+}
+
+.dropdown-mobile>li>a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1095px) {
+    .nav_bars_btn {
+        display: block;
+    }
+
+    .nav_pc {
+        display: none;
+    }
+
+
+    #userLogo {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* BANNER */
+
+/* SAN PHAM */
+
+/* General Responsive Styling */
+.ALL_San_Pham {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 5%;
+    gap: 2%;
+    /* Added gap for consistent spacing */
+}
+
+.San_Pham {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    background-color: hsl(350, 100%, 97%);
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 20px 5px;
+    margin-bottom: 5%;
+    /* Adjusted for better spacing */
+}
+
+.San_Pham>.ImgSP {
+    width: 100%;
+}
+
+.ImgSP>img {
+    width: 100%;
+    height: 65%;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+.NameSP {
+    margin-top: 5%;
+    color: #06798e;
+    font-size: 1.6vw;
+}
+
+.Purchase_Offer {
+    display: inline-flex;
+    margin: 2%;
+    font-size: 1.3vw;
+}
+
+#Free_Ship {
+    border: 2px #06798e solid;
+    padding: 2%;
+    color: #06798e;
+}
+
+#Giam {
+    border: 2px #fd0000 solid;
+    padding: 2%;
+    color: #fd0000;
+}
+
+.Price {
+    font-weight: 550;
+    color: #027e95;
+    font-size: 1.4vw;
+}
+
+.btn_Buy {
+    color: white;
+    border: none;
+    background-color: #ff8989;
+    padding: 0.3vw;
+    font-weight: bold;
+    font-size: 1vw;
+    padding-left: 7%;
+    padding-right: 7%;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+.btn_Buy:hover {
+    background-color: hsl(0, 100%, 85%);
+}
+
+.btn_Buy:active {
+    background-color: hsl(0, 100%, 90%);
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 1700px) {
+    .San_Pham {
+        width: 30%;
+        /* Adjusted for medium screens */
+        margin: 1% auto;
+    }
+
+    .NameSP {
+        font-size: 2vw;
+    }
+
+    .Purchase_Offer {
+        font-size: 1.8vw;
+    }
+
+    .Price {
+        font-size: 2vw;
+    }
+
+    .btn_Buy {
+        font-size: 1.5vw;
+        padding: 1.5% 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .ALL_San_Pham {
+        justify-content: center;
+    }
+
+    .San_Pham {
+        width: 45%;
+        /* Adjusted for smaller screens */
+        margin: 2%;
+    }
+
+    .NameSP {
+        font-size: 2.5vw;
+    }
+
+    .Purchase_Offer {
+        font-size: 2vw;
+    }
+
+    .Price {
+        font-size: 2.2vw;
+    }
+
+    .btn_Buy {
+        font-size: 2vw;
+        padding: 2%;
+    }
+}
+
+@media (max-width: 480px) {
+    .San_Pham {
+        width: 90%;
+        /* Full width on very small screens */
+        margin: 5% auto;
+    }
+
+    .NameSP {
+        font-size: 4vw;
+    }
+
+    .Purchase_Offer {
+        font-size: 3.5vw;
+    }
+
+    .Price {
+        font-size: 3.5vw;
+    }
+
+    .btn_Buy {
+        font-size: 3vw;
+        padding: 3% 5%;
+    }
+}
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+.footer {
+    padding: 0%;
+    margin: 0%;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 550px;
+    background-color: rgb(255, 232, 232);
+    top: 100px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    border-top: 1px solid #ccc;
+
+}
+
+.thongtin>i>h2 {
+    margin-top: 20%;
+    font-size: 2.0em;
+    color: rgb(164, 22, 69);
+
+}
+
+.lienhe {
+    width: 15%;
+}
+
+.lienhe>i>h2 {
+    margin-top: 27%;
+    font-size: 2.0em;
+    color: rgb(164, 22, 69);
+}
+
+.footer>img {
+
+    margin-top: 1%;
+}
+
+.footer h2 {
+
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin-left: 0.5%;
+    font-size: 0.9em;
+    line-height: 1.9;
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .footer img {
+        width: 50%;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .thongtin>i>h2,
+    .lienhe>i>h2 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .thongtin,
+    .lienhe {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer h2 {
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+
+    .footer p {
+        font-size: 0.8em;
+        line-height: 1.5;
+    }
+
+    .thongtin>i>h2 {
+        margin-top: 0;
+
+    }
+
+
+    .lienhe>i>h2 {
+        margin-top: 5%;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px;
+    }
+
+    .footer img {
+        width: 70%;
+        margin-top: 10px;
+    }
+
+    .thongtin>i>h2,
+    .lienhe>i>h2 {
+        font-size: 1.2em;
+    }
+
+    .footer h2,
+    .footer p {
+        font-size: 0.9em;
+    }
+}
+
+/* POP UP */
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Popup Content */
+.popup-content {
+    background: white;
+    padding: 20px;
+    width: 50%;
+    height: 650px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.Left-Right {
+    display: flex;
+    margin-top: 2.2vw;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Left Section */
+.left-section {
+    flex: 1;
+    padding-right: 20px;
+
+}
+
+/* Right Section */
+.right-section {
+    flex: 1;
+}
+
+/* Product Title */
+.title {
+    display: inline;
+    font-size: 250%;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Table Styling */
+
+.Size {
+    font-size: x-large;
+    color: #ff8989;
+    font-weight: bold;
+}
+
+.Price {
+    font-size: x-large;
+    color: #027e95;
+    font-weight: bold;
+}
+
+
+.product-table {
+    width: 100%;
+    border-collapse: separate;
+    margin-bottom: 0.5vw;
+    border: 3px #086a7c solid;
+    border-radius: 20px;
+}
+
+.product-table th,
+.product-table td {
+    padding: 0.6vw;
+    text-align: center;
+
+}
+
+.product-table th {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.in-stock {
+    font-size: x-large;
+    color: #ff8989;
+    font-weight: bold;
+}
+
+.out-of-stock {
+    color: #aaa;
+    font-size: x-large;
+
+    font-weight: bold;
+}
+
+/* Selected Price */
+.price-display {
+    font-size: 2.5rem;
+    color: #06798e;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Size Buttons */
+.size-options {
+    margin-bottom: 20px;
+}
+
+.size-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin-right: 10px;
+    background: #f5f5f5;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.size-button.active {
+    background-color: #ff8989;
+    color: white;
+}
+
+.size-button:hover {
+    background-color: hsl(0, 100%, 90%);
+}
+
+/* Form Fields */
+.form-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: 3px solid #ee7979;
+    outline: none;
+    font-size: x-large;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 60%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: hsl(0, 100%, 77%);
+    color: white;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: hsl(0, 100%, 83%);
+}
+
+.submit-btn:active {
+    background-color: hsl(0, 100%, 90%);
+}
+
+/* Extra Features List */
+.features {
+    display: flex;
+    justify-content: space-around;
+    font-size: 130%;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Success Message */
+.success-message {
+    display: none;
+    color: green;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 1200px) {
+    .popup-content {
+        width: 90%;
+        /* Reduce the width for smaller screens */
+        height: auto;
+        /* Allow height to adjust */
+    }
+
+    .Left-Right {
+        flex-direction: column;
+        /* Stack sections vertically */
+        margin-top: 10px;
+        /* Adjust spacing */
+    }
+
+    .left-section,
+    .right-section {
+        padding: 10px;
+        /* Adjust padding */
+        width: 100%;
+        /* Make both sections full width */
+    }
+
+    .submit-btn {
+        width: 80%;
+        /* Adjust button width */
+        margin: auto;
+        /* Center the button */
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .popup-content {
+        width: 95%;
+    }
+
+    .title {
+        font-size: 150%;
+    }
+
+    .price-display,
+    .form-field {
+        font-size: medium;
+    }
+
+    .features {
+        flex-direction: column;
+        font-size: 100%;
+    }
+
+    .product-table th {
+        font-size: 1.7rem;
+    }
+
+    .size-button {
+        padding: 8px 15px;
+        font-size: small;
+    }
+
+
+}
+
+@media (max-width: 350px) {
+    .close-btn {
+        top: 60px;
+    }
+
+}
